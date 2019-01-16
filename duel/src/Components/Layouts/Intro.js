@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-import { LandingWrapper, IntroHeader, IntroTextWrapper } from './Main.style.js';
+import { LandingWrapper, IntroHeader, IntroTextWrapper, LeftLine, RightLine, TopLine } from './Main.style.js';
 
 export default class Landing extends Component {
   render() {
     return (
       <LandingWrapper>
+        <TopLine left="-4rem" width="calc(100% + 9rem)" top="6rem" />
+        <LeftLine height="80%" top="0"/>
         <IntroHeader>
           <img src={require('../../assets/HeaderIntro.svg')} />
           <IntroTextWrapper>
@@ -22,6 +24,7 @@ export default class Landing extends Component {
             </p>
           </IntroTextWrapper>
         </IntroHeader>
+        <RightLine bottom="0" height="8rem" right="8rem"/>
       </LandingWrapper>
     );
   }
