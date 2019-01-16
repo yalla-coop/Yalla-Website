@@ -29,6 +29,7 @@ export const Contact = styled(Link).attrs({
   right: 9rem;
   text-decoration: none;
   font-size: 1.25rem;
+  z-index: 2;
 
   :after {
     content: " ";
@@ -39,7 +40,11 @@ export const Contact = styled(Link).attrs({
   }
 
   :hover {
-    text-decoration: underline;
+    color: var(--primary);
+
+    :after {
+      border-bottom: 2px var(--primary) solid;
+    }
   }
 
 `;
