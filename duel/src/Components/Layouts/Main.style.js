@@ -24,7 +24,7 @@ export const Title = styled.div.attrs({
 
 `;
 
-export const Contact = styled(Link).attrs({
+export const ContactLink = styled(Link).attrs({
   className: 'flex fixed h3 items-end mp-secondary-color'
 })`
   right: 9rem;
@@ -121,6 +121,7 @@ export const LeftLine = styled(VerticalLine)`
 height: ${props => props.height};
 top: ${props => props.top};
 left: ${props => props.left};
+border-color: ${props => props.borderColor};
 `
 
 export const RightLine = styled(VerticalLine).attrs({})`
@@ -128,8 +129,8 @@ height: ${props => props.height};
 top: ${props => props.top};
 right: ${props => props.right};
 bottom: ${props => props.bottom};
+border-color: ${props => props.borderColor};
 `
-
 
 export const BottomLine = styled(HorizontalLine).attrs({})`
 left: ${props => props.left};
