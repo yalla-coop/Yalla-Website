@@ -1,14 +1,103 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Fonts */
+/* headerText */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--black);
+}
+
+html {
+  background-color: var(--white);
+}
+
+/* Colors */
+
+/* the below are the core colours if needed if classes below don't cover what you need */
+:root {
+  --primary: #688CC1;
+  --secondary: #84DCC6;
+  --white: #FEFEFE;
+  --black: #0D131C;
+  --gray: #B7BABF;
+}
+
+/* Colors as classes - preferred way to apply color */
+
+/* Text colors */
+
+.mp-primary-color {
+  color: var(--primary);
+}
+
+.mp-secondary-color {
+  color: var(--secondary);
+}
+
+
+.mp-white-color {
+  color: var(--white);
+}
+
+.mp-black-color {
+  color: var(--black);
+}
+
+.mp-gray-color {
+  color: var(--gray);
+}
+
+/* Background Colors */
+
+.mp-bg-primary {
+  background-color: var(--primary);
+}
+
+.mp-bg-secondary {
+  background-color:  var(--secondary);
+}
+
+.mp-bg-white {
+  background-color:  var(--white);
+}
+
+.mp-bg-black {
+  background-color:  var(--black);
+}
+
+.mp-bg-gray {
+  background-color:  var(--gray);
+}
+
+/* Border Colors */
+
+.mp-b--primary-color {
+  border-color:  var(--primary);
+}
+
+.mp-b--secondary {
+  border-color:  var(--secondary);
+}
+
+.mp-b--white {
+  border-color:  var(--white);
+}
+
+.mp-b--black {
+  border-color:  var(--black);
+}
+
+.mp-b--gray {
+  border-color:  var(--gray);
 }
