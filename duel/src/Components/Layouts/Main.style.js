@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from "react-scroll"
 
 // default wrapper 128px pa left and right
 const Wrapper = styled.div.attrs({})`
@@ -81,6 +82,22 @@ export const SectionWrapper = styled.div.attrs({})`
     color: var(--white);
     font-size: 2rem;
   }
+`
+
+export const Footer = styled(ScrollLink).attrs({
+  className: "flex justify-center"
+})`
+  position: absolute;
+  bottom: 1rem;
+  width: calc(100% - 16rem);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  img {
+    transform: rotate(90deg);
+  }
+
+  :hover { transform: scale(1.1); }
 `
 
 

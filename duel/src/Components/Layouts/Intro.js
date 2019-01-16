@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import { LandingWrapper, IntroHeader, IntroTextWrapper, LeftLine, RightLine, TopLine } from './Main.style.js';
+import { LandingWrapper, IntroHeader, IntroTextWrapper, LeftLine, RightLine, TopLine, Footer } from './Main.style.js';
 
 export default class Landing extends Component {
   render() {
     return (
-      <LandingWrapper>
+      <LandingWrapper id="intro">
         <TopLine left="-4rem" width="calc(100% + 9rem)" top="6rem" />
         <LeftLine height="80%" top="0"/>
         <IntroHeader>
@@ -24,6 +24,9 @@ export default class Landing extends Component {
             </p>
           </IntroTextWrapper>
         </IntroHeader>
+        <Footer to="work" smooth={true} duration={500} >
+          <img src={require('../../assets/Right-Arrows.svg')} alt="arrow" />
+        </Footer>
         <RightLine bottom="0" height="8rem" right="8rem"/>
       </LandingWrapper>
     );
