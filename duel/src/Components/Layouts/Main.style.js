@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from "react-scroll"
 
 // default wrapper 128px pa left and right
 const Wrapper = styled.div.attrs({})`
@@ -23,7 +24,7 @@ export const Title = styled.div.attrs({
 
 `;
 
-export const Contact = styled(Link).attrs({
+export const ContactLink = styled(Link).attrs({
   className: 'flex fixed h3 items-end mp-secondary-color'
 })`
   right: 9rem;
@@ -49,6 +50,59 @@ export const Contact = styled(Link).attrs({
 
 `;
 
+export const IntroHeader = styled.div.attrs({
+  className: 'flex flex-column'
+})`
+  height: 100%;
+  padding-top: 8rem;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
+`;
+
+export const IntroTextWrapper = styled.div.attrs({
+  className: 'flex flex-column'
+})`
+  padding-left: 6rem;
+  padding-top: 1rem;
+  justify-content: flex-start;
+  p {
+    font-size: 1rem;
+    text-align: right;
+    font-weight: 300;
+  }
+`;
+
+export const SectionWrapper = styled.div.attrs({})`
+  height: 100%;
+  padding-top: 2.45rem;
+
+  h2 {
+    -webkit-text-stroke: 1px var(--secondary);
+    color: var(--white);
+    font-size: 2rem;
+  }
+`
+
+export const Footer = styled(ScrollLink).attrs({
+  className: "flex justify-center"
+})`
+  position: absolute;
+  bottom: 1rem;
+  width: calc(100% - 16rem);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  img {
+    transform: rotate(90deg);
+  }
+
+  :hover { transform: scale(1.1); }
+`
+
+
+// LINE STYLINGS
+
 const VerticalLine = styled.div.attrs({
 
 })`
@@ -63,21 +117,41 @@ const HorizontalLine = styled.div.attrs({})`
   position: relative;
 `
 
-export const LeftLine = styled(VerticalLine).attrs({})`
-top: 6rem;
-height: calc(100% - 6rem);
+export const LeftLine = styled(VerticalLine)`
+height: ${props => props.height};
+top: ${props => props.top};
+left: ${props => props.left};
+border-color: ${props => props.borderColor};
 `
 
 export const RightLine = styled(VerticalLine).attrs({})`
-right: 8rem;
-top: 0;
-height: 80%; `
+height: ${props => props.height};
+top: ${props => props.top};
+right: ${props => props.right};
+bottom: ${props => props.bottom};
+border-color: ${props => props.borderColor};
+`
 
 export const BottomLine = styled(HorizontalLine).attrs({})`
-  left: -4rem;
-  width: calc(100% + 9rem);
+left: ${props => props.left};
+width: ${props => props.width};
 
   -webkit-box-shadow: -8px 6px 0px 0px var(--primary);
   -moz-box-shadow: -8px 6px 0px 0px var(--primary);
   box-shadow: -8px 6px 0px 0px var(--primary);
+`
+
+export const TopLine = styled(HorizontalLine).attrs({})`
+left: ${props => props.left};
+width: ${props => props.width};
+top: ${props => props.top};
+
+  -webkit-box-shadow: -8px -6px 0px 0px var(--secondary);
+  -moz-box-shadow: -8px -6px 0px 0px var(--secondary);
+  box-shadow: -8px -6px 0px 0px var(--secondary);
+`
+export const TopLineNarrow = styled(HorizontalLine).attrs({})`
+left: ${props => props.left};
+width: ${props => props.width};
+top: ${props => props.top};
 `

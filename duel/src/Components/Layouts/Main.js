@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import Landing from './Landing';
-import { Contact } from './Main.style';
+import Intro from './Intro';
+import About from './About'
+import Work from './Work'
+import Contact from './Contact'
+import { ContactLink } from './Main.style';
 
 export default class Main extends Component {
   render() {
     return (
       <div>
-        <Contact to="/">contact</Contact>
+        <ContactLink to="/">contact</ContactLink>
         <Landing />
+        <Intro />
+        <Work />
+        <About />
+        <Contact />
       </div>
     );
   }
