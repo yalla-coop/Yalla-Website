@@ -1,6 +1,31 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from "react-scroll"
+import { Link as ScrollLink } from 'react-scroll';
+
+import img from '../../assets/workScreens/EastEnd-Carousel.png';
+
+// media queries
+
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
+};
+
+export const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`
+};
 
 // default wrapper 128px pa left and right
 const Wrapper = styled.div.attrs({})`
@@ -21,7 +46,6 @@ export const Title = styled.div.attrs({
   className: 'flex justify-center align-center'
 })`
   width: 100%;
-
 `;
 
 export const ContactLink = styled(Link).attrs({
@@ -33,8 +57,8 @@ export const ContactLink = styled(Link).attrs({
   z-index: 2;
 
   :after {
-    content: " ";
-    position:absolute;
+    content: ' ';
+    position: absolute;
     bottom: 0.25rem;
     border-bottom: 1px var(--secondary) solid;
     width: calc(100% + 3rem);
@@ -47,7 +71,6 @@ export const ContactLink = styled(Link).attrs({
       border-bottom: 2px var(--primary) solid;
     }
   }
-
 `;
 
 export const IntroHeader = styled.div.attrs({
@@ -73,85 +96,108 @@ export const IntroTextWrapper = styled.div.attrs({
   }
 `;
 
-export const SectionWrapper = styled.div.attrs({})`
+export const SectionWrapper = styled.div.attrs({
+  className: 'flex flex-column'
+})`
   height: 100%;
   padding-top: 2.45rem;
-
   h2 {
     -webkit-text-stroke: 1px var(--secondary);
     color: var(--white);
     font-size: 2rem;
   }
-`
+`;
+
+export const CarousselWrapper = styled.div.attrs({
+  className: 'w-70 flex flex-column self-center'
+})``;
+
+export const ImageDiv = styled.div.attrs({
+  className: 'w-100 flex self-center'
+})`
+  // border: 1px solid blue;
+  background: url(${img}) center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+
+  @media ${device.tablet} {
+    height: 300px;
+  }
+  @media ${device.mobileL} {
+    height: 250px;
+  }
+  @media ${device.mobileS} {
+    height: 100px;
+  }
+`;
 
 export const Footer = styled(ScrollLink).attrs({
-  className: "flex justify-center"
+  className: 'flex justify-center'
 })`
   position: absolute;
   bottom: 1rem;
   width: calc(100% - 16rem);
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   img {
     transform: rotate(90deg);
   }
 
-  :hover { transform: scale(1.1); }
-`
-
+  :hover {
+    transform: scale(1.1);
+  }
+`;
 
 // LINE STYLINGS
 
-const VerticalLine = styled.div.attrs({
-
-})`
+const VerticalLine = styled.div.attrs({})`
   height: 100%;
   border-left: 1px solid var(--black);
   position: absolute;
-
-`
+`;
 const HorizontalLine = styled.div.attrs({})`
   width: 100%;
   border-top: 1px solid var(--black);
   position: relative;
-`
+`;
 
 export const LeftLine = styled(VerticalLine)`
-height: ${props => props.height};
-top: ${props => props.top};
-left: ${props => props.left};
-border-color: ${props => props.borderColor};
-`
+  height: ${props => props.height};
+  top: ${props => props.top};
+  left: ${props => props.left};
+  border-color: ${props => props.borderColor};
+`;
 
 export const RightLine = styled(VerticalLine).attrs({})`
-height: ${props => props.height};
-top: ${props => props.top};
-right: ${props => props.right};
-bottom: ${props => props.bottom};
-border-color: ${props => props.borderColor};
-`
+  height: ${props => props.height};
+  top: ${props => props.top};
+  right: ${props => props.right};
+  bottom: ${props => props.bottom};
+  border-color: ${props => props.borderColor};
+`;
 
 export const BottomLine = styled(HorizontalLine).attrs({})`
-left: ${props => props.left};
-width: ${props => props.width};
+  left: ${props => props.left};
+  width: ${props => props.width};
 
   -webkit-box-shadow: -8px 6px 0px 0px var(--primary);
   -moz-box-shadow: -8px 6px 0px 0px var(--primary);
   box-shadow: -8px 6px 0px 0px var(--primary);
-`
+`;
 
 export const TopLine = styled(HorizontalLine).attrs({})`
-left: ${props => props.left};
-width: ${props => props.width};
-top: ${props => props.top};
+  left: ${props => props.left};
+  width: ${props => props.width};
+  top: ${props => props.top};
 
   -webkit-box-shadow: -8px -6px 0px 0px var(--secondary);
   -moz-box-shadow: -8px -6px 0px 0px var(--secondary);
   box-shadow: -8px -6px 0px 0px var(--secondary);
-`
+`;
 export const TopLineNarrow = styled(HorizontalLine).attrs({})`
-left: ${props => props.left};
-width: ${props => props.width};
-top: ${props => props.top};
-`
+  left: ${props => props.left};
+  width: ${props => props.width};
+  top: ${props => props.top};
+`;
