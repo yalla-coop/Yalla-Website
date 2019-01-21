@@ -31,20 +31,23 @@ export const ContactLink = styled(Link).attrs({
   text-decoration: none;
   font-size: 1.25rem;
   z-index: 2;
+  transition: all .5s ease-in-out;
 
   :after {
-    content: " ";
+    content: "";
     position:absolute;
     bottom: 0.25rem;
     border-bottom: 1px var(--secondary) solid;
     width: calc(100% + 3rem);
+    transition: all .5s ease-in-out;
   }
 
   :hover {
     color: var(--primary);
 
     :after {
-      border-bottom: 2px var(--primary) solid;
+      border-color: var(--primary);
+      width: calc(100% + 9rem);
     }
   }
 
@@ -83,6 +86,36 @@ export const SectionWrapper = styled.div.attrs({})`
     font-size: 2rem;
   }
 `
+
+export const ContactWrapper = styled.div.attrs({
+  className: "flex flex-column items-center"
+})`
+  padding-top: 1rem;
+  position: relative
+
+  p {
+    align-self: flex-start;
+    padding-left: 6rem;
+  }
+
+  a {
+    text-decoration: none;
+    padding-left: 6rem;
+    h3 {
+      font-weight: 300;
+      font-size: 2rem;
+      color: var(--primary)
+    }
+
+    :after {
+      content: "";
+      position:absolute;
+      bottom: 2.4rem;
+      border-bottom: 1px var(--primary) solid;
+      width: calc(100% - 10rem);
+    }
+  }
+  `
 
 export const Footer = styled(ScrollLink).attrs({
   className: "flex justify-center"
