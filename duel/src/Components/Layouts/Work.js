@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Flickity from 'react-flickity-component';
+import React, { Component } from "react";
+import Flickity from "react-flickity-component";
 
 import {
   LandingWrapper,
@@ -9,8 +9,9 @@ import {
   SectionWrapper,
   Footer,
   CarousselWrapper,
-  ImageDiv
-} from './Main.style.js';
+  ImageDiv,
+  ImageWrapper
+} from "./Main.style.js";
 
 const flickityOptions = {
   prevNextButtons: true,
@@ -29,15 +30,20 @@ export default class Work extends Component {
             <Flickity
               // disableImagesLoaded={true}
               options={flickityOptions}
-              className="mt5"
+              className="flickity-custom"
             >
-              <ImageDiv />
-              <ImageDiv />
+              <ImageWrapper>
+                <ImageDiv />
+              </ImageWrapper>
+              <ImageWrapper>
+                <ImageDiv />
+              </ImageWrapper>
+              {/* <ImageDiv /> */}
             </Flickity>
           </CarousselWrapper>
         </SectionWrapper>
         <Footer to="about" smooth={true} duration={500}>
-          <img src={require('../../assets/Right-Arrows.svg')} alt="arrow" />
+          <img src={require("../../assets/Right-Arrows.svg")} alt="arrow" />
         </Footer>
         <RightLine top="0" height="8rem" right="8rem" />
       </LandingWrapper>

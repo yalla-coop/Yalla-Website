@@ -1,19 +1,19 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
-import img from '../../assets/workScreens/EastEnd-Carousel.png';
+import img from "../../assets/workScreens/EastEnd-Carousel.png";
 
 // media queries
 
 const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px'
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px"
 };
 
 export const device = {
@@ -35,7 +35,7 @@ const Wrapper = styled.div.attrs({})`
 `;
 
 export const LandingWrapper = styled(Wrapper).attrs({
-  className: 'vh-100 flex flex-column justify-center'
+  className: "vh-100 flex flex-column justify-center"
 })`
   padding-left: 8rem;
   padding-right: 8rem;
@@ -43,13 +43,13 @@ export const LandingWrapper = styled(Wrapper).attrs({
 `;
 
 export const Title = styled.div.attrs({
-  className: 'flex justify-center align-center'
+  className: "flex justify-center align-center"
 })`
   width: 100%;
 `;
 
 export const ContactLink = styled(Link).attrs({
-  className: 'flex fixed h3 items-end mp-secondary-color'
+  className: "flex fixed h3 items-end mp-secondary-color"
 })`
   right: 9rem;
   text-decoration: none;
@@ -57,7 +57,7 @@ export const ContactLink = styled(Link).attrs({
   z-index: 2;
 
   :after {
-    content: ' ';
+    content: " ";
     position: absolute;
     bottom: 0.25rem;
     border-bottom: 1px var(--secondary) solid;
@@ -74,7 +74,7 @@ export const ContactLink = styled(Link).attrs({
 `;
 
 export const IntroHeader = styled.div.attrs({
-  className: 'flex flex-column'
+  className: "flex flex-column"
 })`
   height: 100%;
   padding-top: 8rem;
@@ -84,7 +84,7 @@ export const IntroHeader = styled.div.attrs({
 `;
 
 export const IntroTextWrapper = styled.div.attrs({
-  className: 'flex flex-column'
+  className: "flex flex-column"
 })`
   padding-left: 6rem;
   padding-top: 1rem;
@@ -97,7 +97,7 @@ export const IntroTextWrapper = styled.div.attrs({
 `;
 
 export const SectionWrapper = styled.div.attrs({
-  className: 'flex flex-column'
+  className: "flex flex-column"
 })`
   height: 100%;
   padding-top: 2.45rem;
@@ -108,14 +108,27 @@ export const SectionWrapper = styled.div.attrs({
   }
 `;
 
+export const ImageWrapper = styled.div.attrs({ className: "w-100" })`
+  padding: 3rem;
+  padding-left: 0;
+  /* height: 400px; */
+`;
+
 export const CarousselWrapper = styled.div.attrs({
-  className: 'w-70 flex flex-column self-center'
-})``;
+  className: "w-80 flex flex-column self-center"
+})`
+  .flickity-custom {
+    transition: all 0.5s ease;
+
+    :hover {
+      transform: scale(1.05);
+    }
+  }
+`;
 
 export const ImageDiv = styled.div.attrs({
-  className: 'w-100 flex self-center'
+  className: "w-100 self-center"
 })`
-  // border: 1px solid blue;
   background: url(${img}) center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -133,7 +146,7 @@ export const ImageDiv = styled.div.attrs({
 `;
 
 export const Footer = styled(ScrollLink).attrs({
-  className: 'flex justify-center'
+  className: "flex justify-center"
 })`
   position: absolute;
   bottom: 1rem;
