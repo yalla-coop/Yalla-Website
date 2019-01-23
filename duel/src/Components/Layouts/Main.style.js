@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
-import img from '../../assets/workScreens/EastEnd-Carousel.png';
-
 // media queries
 
 const size = {
@@ -133,6 +131,7 @@ export const ImageDiv = styled.div.attrs({
   className: 'w-100 self-center'
 })`
   background: url(${props => props.img}) center;
+  title: ${props => props.title}
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;

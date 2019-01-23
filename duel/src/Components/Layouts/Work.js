@@ -1,5 +1,8 @@
-import React, { Component } from "react";
-import Flickity from "react-flickity-component";
+import React, { Component } from 'react';
+import Flickity from 'react-flickity-component';
+import { Link } from 'react-router-dom';
+
+import ProjectJSON from '../../projects.json';
 
 import {
   LandingWrapper,
@@ -11,7 +14,7 @@ import {
   CarousselWrapper,
   ImageDiv,
   ImageWrapper
-} from "./Main.style.js";
+} from './Main.style.js';
 
 const flickityOptions = {
   prevNextButtons: true,
@@ -27,23 +30,25 @@ export default class Work extends Component {
         <SectionWrapper>
           <h2>OUR WORK</h2>
           <CarousselWrapper>
-            <Flickity
-              // disableImagesLoaded={true}
-              options={flickityOptions}
-              className="flickity-custom"
-            >
-              <ImageWrapper>
-                <ImageDiv />
-              </ImageWrapper>
-              <ImageWrapper>
-                <ImageDiv />
-              </ImageWrapper>
-              {/* <ImageDiv /> */}
+            <Flickity options={flickityOptions} className="flickity-custom">
+              {ProjectJSON.map((project, index) => {
+                const { Title, TitleImg, Tag } = project;
+                return (
+                  <ImageWrapper key={index}>
+                    <Link to={`/projects/${Tag}`}>
+                      <ImageDiv
+                        title={Title}
+                        img={require(`../../assets/workScreens/${TitleImg}`)}
+                      />
+                    </Link>
+                  </ImageWrapper>
+                );
+              })}
             </Flickity>
           </CarousselWrapper>
         </SectionWrapper>
         <Footer to="about" smooth={true} duration={500}>
-          <img src={require("../../assets/Right-Arrows.svg")} alt="arrow" />
+          <img src={require('../../assets/Right-Arrows.svg')} alt="arrow" />
         </Footer>
         <RightLine top="0" height="8rem" right="8rem" />
       </LandingWrapper>
