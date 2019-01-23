@@ -132,7 +132,7 @@ export const CarousselWrapper = styled.div.attrs({
 export const ImageDiv = styled.div.attrs({
   className: 'w-100 self-center'
 })`
-  background: url(${img}) center;
+  background: url(${props => props.img}) center;
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;
