@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { LandingWrapper, LeftLine, RightLine, TopLineNarrow, SectionWrapper } from './Main.style.js';
+import { LandingWrapper, LeftLine, RightLine, TopLineNarrow, SectionWrapper, ContactWrapper } from './Main.style.js';
 
 export default class Contact extends Component {
   render() {
@@ -11,6 +11,7 @@ export default class Contact extends Component {
         <TopLineNarrow left="-1rem" width="calc(100% + 2rem)" top="6rem" />
         <SectionWrapper>
           <h2>CONTACT US</h2>
+          <ContactWrapper><p>Want to chat a bit more?</p><p>Please get in touch below:</p><a href="mailto:sup@duelcoop.com"><h3>email: sup@duelcoop.com</h3></a></ContactWrapper>
         </SectionWrapper>
       </LandingWrapper>
     );
