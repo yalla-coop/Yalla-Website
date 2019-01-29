@@ -74,6 +74,16 @@ export const ContactLink = styled(Link).attrs({
   }
 `;
 
+export const ExtLink = styled(Link).attrs({
+  className: 'no-underline mp-secondary-color'
+})`
+  transition: all 0.5s ease-in-out;
+
+  :hover {
+    color: var(--primary);
+  }
+`;
+
 export const IntroHeader = styled.div.attrs({
   className: 'flex flex-column'
 })`
@@ -144,6 +154,62 @@ export const ImageDiv = styled.div.attrs({
   }
   @media ${device.mobileS} {
     height: 100px;
+  }
+`;
+
+export const ProjectContainer = styled(Wrapper).attrs({
+  className: 'flex flex-column justify-center'
+})`
+  padding-left: 8rem;
+  padding-right: 8rem;
+  position: relative;
+`;
+
+export const ProjectImageDiv = styled.div.attrs({
+  className: 'contain bg-center'
+})`
+  background: url(${props => props.img}) center;
+  title: ${props => props.title}
+  background-repeat: no-repeat;
+  height: 400px;
+`;
+
+export const ProjectIntroDiv = styled.div.attrs({
+  className: 'flex flex-column'
+})`
+  justify-content: flex-start;
+  p {
+    font-size: 1rem;
+
+    font-weight: 300;
+  }
+`;
+
+export const ProjectTextBox = styled.div.attrs({
+  className: 'flex flex-column'
+})`
+  padding-left: 6rem;
+  padding-right: 1rem;
+  justify-content: flex-start;
+  p {
+    font-size: 1rem;
+    text-align: right;
+    font-weight: 300;
+  }
+`;
+
+export const ProjectLinkWrapper = styled.div.attrs({
+  className: 'flex self-center pa2'
+})`
+  a {
+    text-decoration: none;
+    margin-right: 13px;
+
+    h3 {
+      font-weight: 300;
+      font-size: 2rem;
+      color: var(--primary);
+    }
   }
 `;
 
