@@ -195,6 +195,96 @@ export const Footer = styled(ScrollLink).attrs({
   }
 `;
 
+export const TeamWrapper = styled.div.attrs({
+  className: "flex justify-center items-center w-100 pa2 h-100"
+})`
+  padding-bottom: 4rem;
+`;
+
+export const Member = styled.div.attrs({})`
+  width: 30%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 100%;
+  font-weight: 300;
+
+  h3 {
+    color: var(--secondary);
+  }
+
+  p {
+    padding-right: 1rem;
+  }
+`;
+
+export const MemberLink = styled(Link)`
+  text-decoration: none;
+  transition: all ease 0.5s;
+  color: var(--primary);
+  font-weight: 400;
+  position: relative;
+
+  :after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0.25rem;
+    border-bottom: 1px var(--gray) solid;
+    transition: all 0.5s ease-in-out;
+    width: calc(100% + 4rem);
+  }
+
+  :hover {
+    color: var(--secondary);
+
+    :after {
+      border-color: var(--secondary);
+      width: calc(100% + 6rem);
+    }
+  }
+`;
+
+export const ProfileImgDiv = styled.div.attrs({
+  className: ""
+})`
+  background: url(${props => props.src}) center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  min-height: 150px;
+  width: 70%;
+  opacity: 0.7;
+  position: relative;
+  transition: all ease 0.5s;
+
+  :hover {
+    opacity: 1;
+  }
+  :after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px var(--gray) solid;
+    width: calc(100% + 30%);
+    bottom: 0;
+  }
+`;
+
+export const ProfileHeader = styled.div.attrs({
+  className: "flex"
+})`
+  align-items: flex-end;
+
+  img {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    transition: all ease 0.3s;
+
+    :hover {
+      transform: scale(1.05);
+    }
+  }
+`;
+
 // LINE STYLINGS
 
 const VerticalLine = styled.div.attrs({})`

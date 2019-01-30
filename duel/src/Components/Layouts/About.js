@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import {
   LandingWrapper,
@@ -6,7 +7,13 @@ import {
   RightLine,
   TopLineNarrow,
   SectionWrapper,
-  Footer
+  Footer,
+  TeamWrapper,
+  Member,
+  MemberLink,
+  ProfileImgDiv,
+  ProfileHeader,
+  BottomLine
 } from "./Main.style.js";
 
 export default class About extends Component {
@@ -17,6 +24,74 @@ export default class About extends Component {
         <TopLineNarrow left="-1rem" width="calc(100% + 2rem)" top="6rem" />
         <SectionWrapper>
           <h2>ABOUT US</h2>
+          <TeamWrapper>
+            <Member>
+              <ProfileHeader>
+                <ProfileImgDiv
+                  src={require("../../assets/profiles/simon-dupree.jpeg")}
+                  alt="simon"
+                />
+                <Link to="">
+                  <img
+                    src={require("../../assets/profiles/image 2.svg")}
+                    alt="github"
+                  />
+                </Link>
+              </ProfileHeader>
+              <h3>Simon Dupree</h3>
+              <p>
+                Text to go here all about what makes us super amazing and
+                everything else that we do. Clicking the link below would then
+                take it to an individual page that has our bio along with a
+                carousel of our work
+              </p>
+              <MemberLink to="/team/:id">Read bio</MemberLink>
+            </Member>
+            <Member>
+              <ProfileHeader>
+                <ProfileImgDiv
+                  src={require("../../assets/profiles/simon-dupree.jpeg")}
+                  alt="simon"
+                />
+                <Link to="">
+                  <img
+                    src={require("../../assets/profiles/image 2.svg")}
+                    alt="github"
+                  />
+                </Link>
+              </ProfileHeader>
+              <h3>Joe Friel</h3>
+              <p>
+                Text to go here all about what makes us super amazing and
+                everything else that we do. Clicking the link below would then
+                take it to an individual page that has our bio along with a
+                carousel of our work
+              </p>
+              <MemberLink to="/team/:id">Read bio</MemberLink>
+            </Member>
+            <Member>
+              <ProfileHeader>
+                <ProfileImgDiv
+                  src={require("../../assets/profiles/simon-dupree.jpeg")}
+                  alt="simon"
+                />
+                <Link to="">
+                  <img
+                    src={require("../../assets/profiles/image 2.svg")}
+                    alt="github"
+                  />
+                </Link>
+              </ProfileHeader>
+              <h3>Michael Watts</h3>
+              <p>
+                Text to go here all about what makes us super amazing and
+                everything else that we do. Clicking the link below would then
+                take it to an individual page that has our bio along with a
+                carousel of our work
+              </p>
+              <MemberLink to="/team/:id">Read bio</MemberLink>
+            </Member>
+          </TeamWrapper>
         </SectionWrapper>
         <Footer to="contact" smooth={true} duration={500}>
           <img src={require("../../assets/Right-Arrows.svg")} alt="arrow" />
