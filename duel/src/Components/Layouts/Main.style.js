@@ -78,10 +78,28 @@ export const ExtLink = styled(Link).attrs({
   className: 'no-underline mp-secondary-color'
 })`
   transition: all 0.5s ease-in-out;
-
   :hover {
     color: var(--primary);
   }
+  img {
+  }
+
+  :hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const ProjectGalleryLink = styled(Link).attrs({
+  className:
+    'flex justify-center items-center self-center overflow-hidden white no-underline '
+})``;
+
+export const ProjectGalleryFrame = styled.div.attrs({
+  className: 'grow hide-child cover'
+})`
+  height: 200px;
+  width: 300px;
+  background: url(${props => props.img});
 `;
 
 export const IntroHeader = styled.div.attrs({
@@ -174,17 +192,6 @@ export const ProjectImageDiv = styled.div.attrs({
   height: 400px;
 `;
 
-export const ProjectIntroDiv = styled.div.attrs({
-  className: 'flex flex-column'
-})`
-  justify-content: flex-start;
-  p {
-    font-size: 1rem;
-
-    font-weight: 300;
-  }
-`;
-
 export const ProjectTextBox = styled.div.attrs({
   className: 'flex flex-column'
 })`
@@ -199,17 +206,32 @@ export const ProjectTextBox = styled.div.attrs({
 `;
 
 export const ProjectLinkWrapper = styled.div.attrs({
-  className: 'flex self-center pa2'
+  className: 'flex self-center pt2 mb3 ml3'
 })`
   a {
     text-decoration: none;
     margin-right: 13px;
-
     h3 {
       font-weight: 300;
       font-size: 2rem;
       color: var(--primary);
     }
+  }
+`;
+
+export const ProjectFooter = styled(ScrollLink).attrs({
+  className: 'flex justify-center'
+})`
+  bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  img {
+    transform: rotate(90deg);
+  }
+
+  :hover {
+    transform: scale(1.1);
   }
 `;
 

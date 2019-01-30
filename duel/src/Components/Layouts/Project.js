@@ -1,64 +1,55 @@
 import React, { Component } from 'react';
 
-// import { Link } from 'react-router-dom';
-
 import ProjectJSON from '../../projects.json';
-
+import ProjectGallery from './ProjectGallery';
 import {
   ProjectContainer,
   LeftLine,
   RightLine,
   TopLineNarrow,
   SectionWrapper,
-  Footer,
+  ProjectFooter,
   ProjectImageDiv,
   ProjectLinkWrapper,
   ProjectTextBox,
-  ProjectIntroDiv,
   ExtLink
 } from './Main.style.js';
 
 const checkTag = (url, tag) => url === tag;
 // function to create a list of names from an array...
-const createString = array =>
-  array.map((e, i, array) => {
-    if (array.length - 1 === i) {
-      return 'and ' + e;
-    } else {
-      return e + ', ';
-    }
-  });
+// const createString = array =>
+//   array.map((e, i, array) => {
+//     if (array.length - 1 === i) {
+//       return 'and ' + e;
+//     } else {
+//       return e + ', ';
+//     }
+//   });
 
 export default class Project extends Component {
   render() {
     const ProjectName = this.props.location.pathname.split('/')[2];
-    console.log(ProjectName);
+
     return (
       <div>
         {ProjectJSON.map(
           (
             {
               Title,
-              Developers,
-              Category,
               Teaser,
-              Client,
-              AboutClient,
               Description1,
               Description2,
-              Duration,
               GitHub,
               Website,
               Tag,
-              TitleImg,
-              Testimonial
+              TitleImg
             },
             index
           ) => {
             if (checkTag(ProjectName, Tag)) {
               return (
                 <div key={index}>
-                  <ProjectContainer>
+                  <ProjectContainer key={index}>
                     <LeftLine top="0" height="8rem" borderColor="var(--gray)" />
                     <RightLine
                       top="0"
@@ -89,10 +80,28 @@ export default class Project extends Component {
                       <ExtLink to={Website}>Visit Website</ExtLink>
                       <ExtLink to={GitHub}>View on GitHub</ExtLink>
                     </ProjectLinkWrapper>
-                    <ExtLink className="mr4 mt3 flex self-center" to="/">
-                      Back
-                    </ExtLink>
+                    <ProjectFooter
+                      to="projectGallery"
+                      smooth={true}
+                      duration={500}
+                    >
+                      <img
+                        src={require('../../assets/Right-Arrows.svg')}
+                        alt="arrow"
+                      />
+                    </ProjectFooter>
                   </ProjectContainer>
+                  <div id="projectGallery">
+                    <ProjectGallery />
+                    <ProjectLinkWrapper>
+                      <ExtLink className="self-center" to="/">
+                        <img
+                          src={require('../../assets/Left-Arrows.svg')}
+                          alt="arrow"
+                        />
+                      </ExtLink>
+                    </ProjectLinkWrapper>
+                  </div>
                 </div>
               );
             }
