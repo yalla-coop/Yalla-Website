@@ -6,9 +6,9 @@
     "id": "simondupree",
     "imgName": "simon-dupree",
     "work": [
-      { "tag": "rent-check", "titleImg": "EastEnd-Carousel.png" },
-      { "tag": "connect5", "titleImg": "Connect5-Carousel.png" },
-      { "tag": "my-pickle", "titleImg": "myPickle-Carousel.png" }
+      { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
+      { "tag": "connect5", "titleImg": "Connect5-Carousel" },
+      { "tag": "my-pickle", "titleImg": "myPickle-Carousel" }
     ]
   },
   {
@@ -18,9 +18,9 @@
     "id": "joefriel",
     "imgName": "joe-friel",
     "work": [
-      { "tag": "connect5", "titleImg": "Connect5-Carousel.png" },
-      { "tag": "sleuth", "titleImg": "Sleuth-Carousel.png" },
-      { "tag": "my-pickle", "titleImg": "myPickle-Carousel.png" }
+      { "tag": "connect5", "titleImg": "Connect5-Carousel" },
+      { "tag": "sleuth", "titleImg": "Sleuth-Carousel" },
+      { "tag": "my-pickle", "titleImg": "myPickle-Carousel" }
     ]
   },
   {
@@ -30,8 +30,8 @@
     "id": "michaelwatts",
     "imgName": "michael-watts",
     "work": [
-      { "tag": "rent-check", "titleImg": "EastEnd-Carousel.png" },
-      { "tag": "connect5", "titleImg": "Connect5-Carousel.png" }
+      { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
+      { "tag": "connect5", "titleImg": "Connect5-Carousel" }
     ]
   }
 ]

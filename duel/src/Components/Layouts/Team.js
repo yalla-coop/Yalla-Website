@@ -81,7 +81,7 @@ export default class Team extends Component {
                       <ImageDiv
                         src={require(`../../assets/workScreens/${
                           caseStudy.titleImg
-                        }`)}
+                        }.png`)}
                       />
                     </Link>
                   </ImageWrapper>
