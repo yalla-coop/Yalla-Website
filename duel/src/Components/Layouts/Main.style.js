@@ -1,17 +1,17 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 // media queries
 
 const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "2560px"
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
 };
 
 export const device = {
@@ -33,7 +33,7 @@ const Wrapper = styled.div.attrs({})`
 `;
 
 export const LandingWrapper = styled(Wrapper).attrs({
-  className: "vh-100 flex flex-column justify-center"
+  className: 'vh-100 flex flex-column justify-center'
 })`
   padding-left: 8rem;
   padding-right: 8rem;
@@ -41,13 +41,13 @@ export const LandingWrapper = styled(Wrapper).attrs({
 `;
 
 export const Title = styled.div.attrs({
-  className: "flex justify-center align-center"
+  className: 'flex justify-center align-center'
 })`
   width: 100%;
 `;
 
 export const ContactLink = styled(ScrollLink).attrs({
-  className: "flex fixed h3 items-end mp-secondary-color"
+  className: 'flex fixed h3 items-end mp-secondary-color'
 })`
   right: 9rem;
   cursor: pointer;
@@ -57,7 +57,7 @@ export const ContactLink = styled(ScrollLink).attrs({
   transition: all 0.5s ease-in-out;
 
   :after {
-    content: " ";
+    content: ' ';
     position: absolute;
     bottom: 0.25rem;
     border-bottom: 1px var(--secondary) solid;
@@ -76,7 +76,7 @@ export const ContactLink = styled(ScrollLink).attrs({
 `;
 
 export const ExtLink = styled.a.attrs({
-  className: "no-underline mp-secondary-color"
+  className: 'no-underline mp-secondary-color'
 })`
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -93,13 +93,13 @@ export const ExtLink = styled.a.attrs({
 
 export const ProjectGalleryLink = styled(Link).attrs({
   className:
-    "flex justify-center items-center self-center overflow-hidden white no-underline "
+    'flex justify-center items-center self-center overflow-hidden white no-underline '
 })`
   text-align: center;
 `;
 
 export const ProjectGalleryFrame = styled.div.attrs({
-  className: "grow hide-child cover bg-center flex justify-center"
+  className: 'grow hide-child cover bg-center flex justify-center'
 })`
   height: 200px;
   width: 300px;
@@ -110,7 +110,7 @@ export const ProjectGalleryFrame = styled.div.attrs({
 `;
 
 export const IntroHeader = styled.div.attrs({
-  className: "flex flex-column"
+  className: 'flex flex-column'
 })`
   height: 100%;
   padding-top: 8rem;
@@ -120,7 +120,7 @@ export const IntroHeader = styled.div.attrs({
 `;
 
 export const IntroTextWrapper = styled.div.attrs({
-  className: "flex flex-column"
+  className: 'flex flex-column'
 })`
   padding-left: 6rem;
   padding-top: 1rem;
@@ -133,7 +133,7 @@ export const IntroTextWrapper = styled.div.attrs({
 `;
 
 export const SectionWrapper = styled.div.attrs({
-  className: "flex flex-column"
+  className: 'flex flex-column'
 })`
   height: 100%;
   padding-top: 2.45rem;
@@ -144,14 +144,14 @@ export const SectionWrapper = styled.div.attrs({
   }
 `;
 
-export const ImageWrapper = styled.div.attrs({ className: "w-100" })`
+export const ImageWrapper = styled.div.attrs({ className: 'w-100' })`
   padding: 3rem;
   padding-left: 0;
   /* height: 400px; */
 `;
 
 export const CarousselWrapper = styled.div.attrs({
-  className: "w-80 flex flex-column self-center"
+  className: 'w-80 flex flex-column self-center'
 })`
   .flickity-custom {
     transition: all 0.5s ease;
@@ -163,7 +163,7 @@ export const CarousselWrapper = styled.div.attrs({
 `;
 
 export const ImageDiv = styled.div.attrs({
-  className: "w-100 self-center"
+  className: 'w-100 self-center'
 })`
   background: url(${props => props.img}) center;
   title: ${props => props.title};
@@ -183,7 +183,7 @@ export const ImageDiv = styled.div.attrs({
 `;
 
 export const ProjectContainer = styled(Wrapper).attrs({
-  className: "flex flex-column justify-center"
+  className: 'flex flex-column justify-center'
 })`
   padding-left: 8rem;
   padding-right: 8rem;
@@ -191,7 +191,7 @@ export const ProjectContainer = styled(Wrapper).attrs({
 `;
 
 export const ProjectImageDiv = styled.div.attrs({
-  className: "contain"
+  className: 'contain'
 })`
   background: url(${props => props.img}) center;
   title: ${props => props.title};
@@ -201,7 +201,7 @@ export const ProjectImageDiv = styled.div.attrs({
 `;
 
 export const ProjectTextBox = styled.div.attrs({
-  className: "flex flex-column"
+  className: 'flex flex-column'
 })`
   padding-left: 6rem;
   padding-right: 1rem;
@@ -214,7 +214,7 @@ export const ProjectTextBox = styled.div.attrs({
 `;
 
 export const ProjectLinkWrapper = styled.div.attrs({
-  className: "flex self-center mb3 ml3"
+  className: 'flex self-center mb3 ml3'
 })`
   a {
     text-decoration: none;
@@ -228,7 +228,7 @@ export const ProjectLinkWrapper = styled.div.attrs({
 `;
 
 export const ProjectFooter = styled(ScrollLink).attrs({
-  className: "flex justify-center"
+  className: 'flex justify-center'
 })`
   bottom: 1rem;
   cursor: pointer;
@@ -244,7 +244,7 @@ export const ProjectFooter = styled(ScrollLink).attrs({
 `;
 
 export const ContactWrapper = styled.div.attrs({
-  className: "flex flex-column items-center"
+  className: 'flex flex-column items-center'
 })`
   padding-top: 1rem;
   position: relative;
@@ -265,7 +265,7 @@ export const ContactWrapper = styled.div.attrs({
     }
 
     :after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 2.4rem;
       border-bottom: 1px var(--primary) solid;
@@ -275,7 +275,7 @@ export const ContactWrapper = styled.div.attrs({
 `;
 
 export const Footer = styled(ScrollLink).attrs({
-  className: "flex justify-center"
+  className: 'flex justify-center'
 })`
   position: absolute;
   bottom: 1rem;
@@ -293,7 +293,7 @@ export const Footer = styled(ScrollLink).attrs({
 `;
 
 export const TeamWrapper = styled.div.attrs({
-  className: "flex justify-center items-center w-100 pa2 h-100"
+  className: 'flex justify-center items-center w-100 pa2 h-100'
 })`
   padding-bottom: 4rem;
 `;
@@ -322,7 +322,7 @@ export const MemberLink = styled(Link)`
   position: relative;
 
   :after {
-    content: " ";
+    content: ' ';
     position: absolute;
     left: 0;
     bottom: 0.25rem;
@@ -342,7 +342,7 @@ export const MemberLink = styled(Link)`
 `;
 
 export const ProfileImgDiv = styled.div.attrs({
-  className: ""
+  className: ''
 })`
   background: url(${props => props.src}) center;
   background-repeat: no-repeat;
@@ -358,7 +358,7 @@ export const ProfileImgDiv = styled.div.attrs({
     opacity: 1;
   }
   :after {
-    content: "";
+    content: '';
     position: absolute;
     border-bottom: 1px var(--gray) solid;
     width: calc(100% + 30%);
@@ -367,7 +367,7 @@ export const ProfileImgDiv = styled.div.attrs({
 `;
 
 export const ProfileHeader = styled.div.attrs({
-  className: "flex"
+  className: 'flex'
 })`
   align-items: flex-end;
 
@@ -382,7 +382,14 @@ export const ProfileHeader = styled.div.attrs({
   }
 `;
 
-export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
+export const HeadlineDiv = styled.div.attrs({
+  className: 'flex flex-column items-center mt6'
+})`
+  h2 {
+  }
+`;
+
+export const ProfileWrapper = styled.div.attrs({ className: 'flex' })`
   position: relative;
   .image {
     position: relative;
@@ -412,7 +419,7 @@ export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
 `;
 
 export const ProfileDescr = styled.div.attrs({
-  className: "flex"
+  className: 'flex'
 })`
   flex-direction: column;
   padding-left: 1rem;
