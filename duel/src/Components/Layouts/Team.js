@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import profiles from "../../profiles.json";
 import Flickity from "react-flickity-component";
-import img from "../../assets/workScreens/EastEnd-Carousel.png";
 
 import {
   ProfileImgDiv,
@@ -45,7 +44,7 @@ export default class Team extends Component {
     if (!loaded) return <h1>Loading...</h1>;
     else {
       console.log(profile);
-      const { name, github, bio, imgName, work } = profile;
+      const { name, github, linkedin, bio, imgName, work } = profile;
       return (
         <LandingWrapper id="about">
           <LeftLine top="0" height="20rem" />
@@ -57,17 +56,25 @@ export default class Team extends Component {
               <div className="image">
                 <img
                   src={require(`../../assets/profiles/${imgName}.jpeg`)}
-                  alt="simon"
+                  alt="profile"
                 />
               </div>
               <ProfileDescr>
                 <p>{bio}</p>
-                <a href={github} target="_blank">
-                  <img
-                    src={require("../../assets/profiles/image 2.svg")}
-                    alt="github"
-                  />
-                </a>
+                <div>
+                  <a href={github} target="_blank">
+                    <img
+                      src={require("../../assets/profiles/image 2.svg")}
+                      alt="github"
+                    />
+                  </a>
+                  <a href={linkedin} target="_blank">
+                    <img
+                      src={require("../../assets/profiles/linkedin-5.svg")}
+                      alt="linkedin"
+                    />
+                  </a>
+                </div>
               </ProfileDescr>
             </ProfileWrapper>
             <Flickity
@@ -75,13 +82,14 @@ export default class Team extends Component {
               options={flickityOptions}
               className="flickity-custom"
             >
-              {work.map(caseStudy => {
+              {work.map((caseStudy, index) => {
                 console.log(caseStudy);
                 return (
-                  <ImageWrapper>
-                    <Link to={`work/${caseStudy.tag}`}>
+                  <ImageWrapper key={index}>
+                    <Link to={`/projects/${caseStudy.tag}`}>
                       <ImageDiv
-                        src={require(`../../assets/workScreens/${
+                        title={caseStudy.tag}
+                        img={require(`../../assets/workScreens/${
                           caseStudy.titleImg
                         }.png`)}
                       />

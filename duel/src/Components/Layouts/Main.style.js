@@ -75,10 +75,11 @@ export const ContactLink = styled(ScrollLink).attrs({
   }
 `;
 
-export const ExtLink = styled(Link).attrs({
+export const ExtLink = styled.a.attrs({
   className: "no-underline mp-secondary-color"
 })`
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
   :hover {
     color: var(--primary);
   }
@@ -165,7 +166,7 @@ export const ImageDiv = styled.div.attrs({
   className: "w-100 self-center"
 })`
   background: url(${props => props.img}) center;
-  title: ${props => props.title}
+  title: ${props => props.title};
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;
@@ -190,12 +191,13 @@ export const ProjectContainer = styled(Wrapper).attrs({
 `;
 
 export const ProjectImageDiv = styled.div.attrs({
-  className: "contain bg-center"
+  className: "contain"
 })`
   background: url(${props => props.img}) center;
-  title: ${props => props.title}
+  title: ${props => props.title};
   background-repeat: no-repeat;
-  height: 400px;
+  height: 300px;
+  margin-top: 0.5rem;
 `;
 
 export const ProjectTextBox = styled.div.attrs({
@@ -212,7 +214,7 @@ export const ProjectTextBox = styled.div.attrs({
 `;
 
 export const ProjectLinkWrapper = styled.div.attrs({
-  className: "flex self-center pt2 mb3 ml3"
+  className: "flex self-center mb3 ml3"
 })`
   a {
     text-decoration: none;
@@ -423,12 +425,19 @@ export const ProfileDescr = styled.div.attrs({
 
   img {
     margin-left: 4px;
+    margin-right: 4px;
     margin-bottom: 4px;
     transition: all ease 0.3s;
+    width: 30px;
+    opacity: 0.7;
 
     :hover {
       transform: scale(1.05);
     }
+  }
+
+  div {
+    display: flex;
   }
 `;
 
