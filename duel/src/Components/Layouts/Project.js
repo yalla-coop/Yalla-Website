@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import ProjectJSON from "../../projects.json";
 import ProjectGallery from "./ProjectGallery";
@@ -27,6 +28,13 @@ const checkTag = (url, tag) => url === tag;
 //   });
 
 export default class Project extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
   render() {
     const ProjectName = this.props.location.pathname.split("/")[2];
 
@@ -64,7 +72,7 @@ export default class Project extends Component {
                     />
                     <SectionWrapper>
                       <div className="flex items-center">
-                        <h2>{Title}</h2>
+                        <h2>{Title.toUpperCase()}</h2>
                       </div>
                     </SectionWrapper>
                     <h3>{Teaser}</h3>
