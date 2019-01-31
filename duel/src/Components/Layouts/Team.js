@@ -14,7 +14,8 @@ import {
   ProfileWrapper,
   ProfileDescr,
   ImageWrapper,
-  ImageDiv
+  ImageDiv,
+  BackLink
 } from "./Main.style.js";
 
 const flickityOptions = {
@@ -49,6 +50,7 @@ export default class Team extends Component {
         <LandingWrapper id="about">
           <LeftLine top="0" height="20rem" />
           <TopLineNarrow left="-1rem" width="calc(100% + 2rem)" top="6rem" />
+          <BackLink to="/">{`<< back`}</BackLink>
           <SectionWrapper>
             <h2>{name.toUpperCase()}</h2>
             <ProfileWrapper>

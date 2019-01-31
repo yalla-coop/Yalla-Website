@@ -337,6 +337,16 @@ export const ProfileDescr = styled.div.attrs({
   }
 `;
 
+export const BackLink = styled(Link).attrs({})`
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: 300;
+`;
+
 // LINE STYLINGS
 
 const VerticalLine = styled.div.attrs({})`
