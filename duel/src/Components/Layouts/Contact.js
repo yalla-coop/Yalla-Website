@@ -26,8 +26,8 @@ export default class Contact extends Component {
           <ContactWrapper>
             <p>Want to chat a bit more?</p>
             <p>Please get in touch below:</p>
-            <a href="mailto:sup@duelcoop.com">
-              <h3>email: sup@duelcoop.com</h3>
+            <a href="mailto:sup@yalla.coop">
+              <h3>email: sup@yalla.coop</h3>
             </a>
           </ContactWrapper>
         </SectionWrapper>

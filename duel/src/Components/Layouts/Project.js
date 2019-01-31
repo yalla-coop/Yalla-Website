@@ -13,7 +13,8 @@ import {
   ProjectImageDiv,
   ProjectLinkWrapper,
   ProjectTextBox,
-  ExtLink
+  ExtLink,
+  BackLink
 } from "./Main.style.js";
 
 const checkTag = (url, tag) => url === tag;
@@ -70,6 +71,7 @@ export default class Project extends Component {
                       width="calc(100% + 2rem)"
                       top="6rem"
                     />
+                    <BackLink to="/">{`<< back`}</BackLink>
                     <SectionWrapper>
                       <div className="flex items-center">
                         <h2>{Title.toUpperCase()}</h2>
@@ -85,8 +87,12 @@ export default class Project extends Component {
                       img={require(`../../assets/workScreens/${TitleImg}.png`)}
                     />
                     <ProjectLinkWrapper>
-                      <ExtLink to={Website}>Visit Website</ExtLink>
-                      <ExtLink to={GitHub}>View on GitHub</ExtLink>
+                      <ExtLink href={Website} target="_blank">
+                        Visit Website
+                      </ExtLink>
+                      <ExtLink href={GitHub} target="_blank">
+                        View on GitHub
+                      </ExtLink>
                     </ProjectLinkWrapper>
                     <ProjectFooter
                       to="projectGallery"
@@ -101,14 +107,14 @@ export default class Project extends Component {
                   </ProjectContainer>
                   <div id="projectGallery">
                     <ProjectGallery />
-                    <ProjectLinkWrapper>
+                    {/* <ProjectLinkWrapper>
                       <ExtLink className="self-center" to="/">
                         <img
                           src={require("../../assets/Left-Arrows.svg")}
                           alt="arrow"
                         />
                       </ExtLink>
-                    </ProjectLinkWrapper>
+                    </ProjectLinkWrapper> */}
                   </div>
                 </div>
               );
