@@ -22,6 +22,10 @@ html {
   background-color: var(--white);
 }
 
+p {
+  line-height: 1.5;
+}
+
 /* Colors */
 
 /* the below are the core colours if needed if classes below don't cover what you need */

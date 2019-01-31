@@ -46,10 +46,11 @@ export const Title = styled.div.attrs({
   width: 100%;
 `;
 
-export const ContactLink = styled(Link).attrs({
+export const ContactLink = styled(ScrollLink).attrs({
   className: "flex fixed h3 items-end mp-secondary-color"
 })`
   right: 9rem;
+  cursor: pointer;
   text-decoration: none;
   font-size: 1.25rem;
   z-index: 2;
@@ -244,7 +245,9 @@ export const ContactWrapper = styled.div.attrs({
   className: "flex flex-column items-center"
 })`
   padding-top: 1rem;
-  position: relative p {
+  position: relative;
+
+  p {
     align-self: flex-start;
     padding-left: 6rem;
   }
@@ -252,6 +255,7 @@ export const ContactWrapper = styled.div.attrs({
   a {
     text-decoration: none;
     padding-left: 6rem;
+    position: relative;
     h3 {
       font-weight: 300;
       font-size: 2rem;
@@ -263,7 +267,7 @@ export const ContactWrapper = styled.div.attrs({
       position: absolute;
       bottom: 2.4rem;
       border-bottom: 1px var(--primary) solid;
-      width: calc(100% - 10rem);
+      width: calc(100% + 2rem);
     }
   }
 `;
@@ -284,6 +288,158 @@ export const Footer = styled(ScrollLink).attrs({
   :hover {
     transform: scale(1.1);
   }
+`;
+
+export const TeamWrapper = styled.div.attrs({
+  className: "flex justify-center items-center w-100 pa2 h-100"
+})`
+  padding-bottom: 4rem;
+`;
+
+export const Member = styled.div.attrs({})`
+  width: 30%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 100%;
+  font-weight: 300;
+
+  h3 {
+    color: var(--secondary);
+  }
+
+  p {
+    padding-right: 1rem;
+  }
+`;
+
+export const MemberLink = styled(Link)`
+  text-decoration: none;
+  transition: all ease 0.5s;
+  color: var(--primary);
+  font-weight: 400;
+  position: relative;
+
+  :after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0.25rem;
+    border-bottom: 1px var(--gray) solid;
+    transition: all 0.5s ease-in-out;
+    width: calc(100% + 4rem);
+  }
+
+  :hover {
+    color: var(--secondary);
+
+    :after {
+      border-color: var(--secondary);
+      width: calc(100% + 6rem);
+    }
+  }
+`;
+
+export const ProfileImgDiv = styled.div.attrs({
+  className: ""
+})`
+  background: url(${props => props.src}) center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  min-height: 150px;
+  width: 70%;
+  opacity: 0.7;
+  position: relative;
+  transition: all ease 0.5s;
+
+  :hover {
+    opacity: 1;
+  }
+  :after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px var(--gray) solid;
+    width: calc(100% + 30%);
+    bottom: 0;
+  }
+`;
+
+export const ProfileHeader = styled.div.attrs({
+  className: "flex"
+})`
+  align-items: flex-end;
+
+  img {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    transition: all ease 0.3s;
+
+    :hover {
+      transform: scale(1.05);
+    }
+  }
+`;
+
+export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
+  position: relative;
+  .image {
+    position: relative;
+    img {
+      max-width: 150px;
+      max-height: 150px;
+      border-left: 1px var(--black) solid;
+    }
+    /* :after {
+      content: "";
+      position: absolute;
+      border-right: 1px var(--gray) solid;
+      height: calc(100% + 2rem);
+      right: 0;
+    } */
+  }
+
+  /* :after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px var(--gray) solid;
+    width: 100%;
+    max-width: calc(150px + 2rem);
+    /* bottom: 0.25rem; */
+    /* top: 150px; */
+  } */
+`;
+
+export const ProfileDescr = styled.div.attrs({
+  className: "flex"
+})`
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-top: 0;
+  height: 100%;
+
+  p {
+    margin-top: 0;
+  }
+
+  img {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    transition: all ease 0.3s;
+
+    :hover {
+      transform: scale(1.05);
+    }
+  }
+`;
+
+export const BackLink = styled(Link).attrs({})`
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: 300;
 `;
 
 // LINE STYLINGS

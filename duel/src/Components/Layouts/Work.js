@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import ProjectJSON from "../../projects.json";
 
+import img from "../../assets/workScreens/EastEnd-Carousel.png";
+
 import {
   LandingWrapper,
   LeftLine,
