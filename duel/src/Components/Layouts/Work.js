@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Flickity from 'react-flickity-component';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import Flickity from "react-flickity-component";
+import { Link } from "react-router-dom";
 
-import ProjectJSON from '../../projects.json';
+import ProjectJSON from "../../projects.json";
 
 import {
   LandingWrapper,
@@ -14,7 +14,7 @@ import {
   CarousselWrapper,
   ImageDiv,
   ImageWrapper
-} from './Main.style.js';
+} from "./Main.style.js";
 
 const flickityOptions = {
   prevNextButtons: true,
@@ -38,7 +38,7 @@ export default class Work extends Component {
                     <Link to={`/projects/${Tag}`}>
                       <ImageDiv
                         title={Title}
-                        img={require(`../../assets/workScreens/${TitleImg}`)}
+                        img={require(`../../assets/workScreens/${TitleImg}.png`)}
                       />
                     </Link>
                   </ImageWrapper>
@@ -48,7 +48,7 @@ export default class Work extends Component {
           </CarousselWrapper>
         </SectionWrapper>
         <Footer to="about" smooth={true} duration={500}>
-          <img src={require('../../assets/Right-Arrows.svg')} alt="arrow" />
+          <img src={require("../../assets/Right-Arrows.svg")} alt="arrow" />
         </Footer>
         <RightLine top="0" height="8rem" right="8rem" />
       </LandingWrapper>

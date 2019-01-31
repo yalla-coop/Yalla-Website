@@ -12,7 +12,8 @@
     "GitHub": "https://github.com/fac-14/eastendtradesguild",
     "Website": "http://eastendtradesguild.herokuapp.com/",
     "Tag": "rent-check",
-    "TitleImg": "RentCheck.png"
+    "TitleImg": "RentCheck",
+    "GalleryImg": "eastend-gallery"
   },
   {
     "Title": "Connect 5 App",
@@ -27,7 +28,8 @@
     "GitHub": "https://github.com/techforbetter/connect5",
     "Website": "https://connect5health.herokuapp.com/",
     "Tag": "connect5",
-    "TitleImg": "RentCheck.png",
+    "TitleImg": "RentCheck",
+    "GalleryImg": "connect5-gallery",
     "Testimonial": "... the people building my app (both here in London and in Gaza) demonstrated high quality levels of attention and application to produce a product which exactly serves my project’s needs (Elysabeth Williams Connect5 national lead)"
   },
   {
@@ -43,7 +45,8 @@
     "GitHub": "https://github.com/techforbetter/myPickle",
     "Website": "",
     "Tag": "my-pickle",
-    "TitleImg": "RentCheck.png"
+    "TitleImg": "RentCheck",
+    "GalleryImg": "myPickle-gallery"
   },
   {
     "Title": "Sleuth",
@@ -58,6 +61,7 @@
     "GitHub": "https://github.com/fac-14/sleuth-coop",
     "Website": "",
     "Tag": "sleuth",
-    "TitleImg": "RentCheck.png"
+    "TitleImg": "RentCheck",
+    "GalleryImg": "sleuth-gallery"
   }
 ]

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import ProjectJSON from '../../projects.json';
-import ProjectGallery from './ProjectGallery';
+import ProjectJSON from "../../projects.json";
+import ProjectGallery from "./ProjectGallery";
 import {
   ProjectContainer,
   LeftLine,
@@ -13,7 +13,7 @@ import {
   ProjectLinkWrapper,
   ProjectTextBox,
   ExtLink
-} from './Main.style.js';
+} from "./Main.style.js";
 
 const checkTag = (url, tag) => url === tag;
 // function to create a list of names from an array...
@@ -28,7 +28,7 @@ const checkTag = (url, tag) => url === tag;
 
 export default class Project extends Component {
   render() {
-    const ProjectName = this.props.location.pathname.split('/')[2];
+    const ProjectName = this.props.location.pathname.split("/")[2];
 
     return (
       <div>
@@ -74,7 +74,7 @@ export default class Project extends Component {
                     </ProjectTextBox>
                     <ProjectImageDiv
                       title={Title}
-                      img={require(`../../assets/workScreens/${TitleImg}`)}
+                      img={require(`../../assets/workScreens/${TitleImg}.png`)}
                     />
                     <ProjectLinkWrapper>
                       <ExtLink to={Website}>Visit Website</ExtLink>
@@ -86,7 +86,7 @@ export default class Project extends Component {
                       duration={500}
                     >
                       <img
-                        src={require('../../assets/Right-Arrows.svg')}
+                        src={require("../../assets/Right-Arrows.svg")}
                         alt="arrow"
                       />
                     </ProjectFooter>
@@ -96,7 +96,7 @@ export default class Project extends Component {
                     <ProjectLinkWrapper>
                       <ExtLink className="self-center" to="/">
                         <img
-                          src={require('../../assets/Left-Arrows.svg')}
+                          src={require("../../assets/Left-Arrows.svg")}
                           alt="arrow"
                         />
                       </ExtLink>
