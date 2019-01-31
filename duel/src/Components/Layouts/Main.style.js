@@ -425,12 +425,19 @@ export const ProfileDescr = styled.div.attrs({
 
   img {
     margin-left: 4px;
+    margin-right: 4px;
     margin-bottom: 4px;
     transition: all ease 0.3s;
+    width: 30px;
+    opacity: 0.7;
 
     :hover {
       transform: scale(1.05);
     }
+  }
+
+  div {
+    display: flex;
   }
 `;
 
