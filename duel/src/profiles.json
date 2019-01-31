@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Simon Dupree",
+    "github": "https://github.com/dupreesi/",
+    "bio": "Text to go here all about what makes us super amazing and everything else that we do. Clicking the link below would then take it to an individual page that has our bio along with a carousel of our work.",
+    "id": "simondupree",
+    "imgName": "simon-dupree",
+    "work": [
+      { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
+      { "tag": "connect5", "titleImg": "Connect5-Carousel" },
+      { "tag": "my-pickle", "titleImg": "myPickle-Carousel" }
+    ]
+  },
+  {
+    "name": "Joe Friel",
+    "github": "https://github.com/thejoefriel",
+    "bio": "Text to go here all about what makes us super amazing and everything else that we do. Clicking the link below would then take it to an individual page that has our bio along with a carousel of our work.",
+    "id": "joefriel",
+    "imgName": "joe-friel",
+    "work": [
+      { "tag": "connect5", "titleImg": "Connect5-Carousel" },
+      { "tag": "sleuth", "titleImg": "Sleuth-Carousel" },
+      { "tag": "my-pickle", "titleImg": "myPickle-Carousel" }
+    ]
+  },
+  {
+    "name": "Michael Watts",
+    "github": "https://github.com/arrested-developer",
+    "bio": "Text to go here all about what makes us super amazing and everything else that we do. Clicking the link below would then take it to an individual page that has our bio along with a carousel of our work.",
+    "id": "michaelwatts",
+    "imgName": "michael-watts",
+    "work": [
+      { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
+      { "tag": "connect5", "titleImg": "Connect5-Carousel" }
+    ]
+  }
+]

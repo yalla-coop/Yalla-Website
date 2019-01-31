@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Flickity from "react-flickity-component";
 
+import img from "../../assets/workScreens/EastEnd-Carousel.png";
+
 import {
   LandingWrapper,
   LeftLine,
@@ -33,10 +35,10 @@ export default class Work extends Component {
               className="flickity-custom"
             >
               <ImageWrapper>
-                <ImageDiv />
+                <ImageDiv src={img} />
               </ImageWrapper>
               <ImageWrapper>
-                <ImageDiv />
+                <ImageDiv src={img} />
               </ImageWrapper>
               {/* <ImageDiv /> */}
             </Flickity>
