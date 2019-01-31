@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import profiles from "../../profiles.json";
+import profiles from '../../profiles.json';
 
 import {
   LandingWrapper,
@@ -16,7 +16,7 @@ import {
   ProfileImgDiv,
   ProfileHeader,
   BottomLine
-} from "./Main.style.js";
+} from './Main.style.js';
 
 export default class About extends Component {
   render() {
@@ -39,25 +39,20 @@ export default class About extends Component {
                   />
                   <a href={profile.github} target="_blank">
                     <img
-                      src={require("../../assets/profiles/image 2.svg")}
+                      src={require('../../assets/profiles/image 2.svg')}
                       alt="github"
                     />
                   </a>
                 </ProfileHeader>
                 <h3>{profile.name}</h3>
-                <p>
-                  Text to go here all about what makes us super amazing and
-                  everything else that we do. Clicking the link below would then
-                  take it to an individual page that has our bio along with a
-                  carousel of our work
-                </p>
+                <p>{profile.teaser}</p>
                 <MemberLink to={`/team/${profile.id}`}>Read bio</MemberLink>
               </Member>
             ))}
           </TeamWrapper>
         </SectionWrapper>
         <Footer to="contact" smooth={true} duration={500}>
-          <img src={require("../../assets/Right-Arrows.svg")} alt="arrow" />
+          <img src={require('../../assets/Right-Arrows.svg')} alt="arrow" />
         </Footer>
       </LandingWrapper>
     );
