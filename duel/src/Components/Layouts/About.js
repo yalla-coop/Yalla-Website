@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import profiles from "../../profiles.json";
+
 import {
   LandingWrapper,
   LeftLine,
@@ -18,6 +20,7 @@ import {
 
 export default class About extends Component {
   render() {
+    profiles.map(profile => console.log(profile));
     return (
       <LandingWrapper id="about">
         <LeftLine top="0" height="8rem" />
@@ -25,72 +28,32 @@ export default class About extends Component {
         <SectionWrapper>
           <h2>ABOUT US</h2>
           <TeamWrapper>
-            <Member>
-              <ProfileHeader>
-                <ProfileImgDiv
-                  src={require("../../assets/profiles/simon-dupree.jpeg")}
-                  alt="simon"
-                />
-                <Link to="">
-                  <img
-                    src={require("../../assets/profiles/image 2.svg")}
-                    alt="github"
+            {profiles.map(profile => (
+              <Member>
+                <ProfileHeader>
+                  <ProfileImgDiv
+                    src={require(`../../assets/profiles/${
+                      profile.imgName
+                    }.jpeg`)}
+                    alt="simon"
                   />
-                </Link>
-              </ProfileHeader>
-              <h3>Simon Dupree</h3>
-              <p>
-                Text to go here all about what makes us super amazing and
-                everything else that we do. Clicking the link below would then
-                take it to an individual page that has our bio along with a
-                carousel of our work
-              </p>
-              <MemberLink to="/team/:id">Read bio</MemberLink>
-            </Member>
-            <Member>
-              <ProfileHeader>
-                <ProfileImgDiv
-                  src={require("../../assets/profiles/simon-dupree.jpeg")}
-                  alt="simon"
-                />
-                <Link to="">
-                  <img
-                    src={require("../../assets/profiles/image 2.svg")}
-                    alt="github"
-                  />
-                </Link>
-              </ProfileHeader>
-              <h3>Joe Friel</h3>
-              <p>
-                Text to go here all about what makes us super amazing and
-                everything else that we do. Clicking the link below would then
-                take it to an individual page that has our bio along with a
-                carousel of our work
-              </p>
-              <MemberLink to="/team/:id">Read bio</MemberLink>
-            </Member>
-            <Member>
-              <ProfileHeader>
-                <ProfileImgDiv
-                  src={require("../../assets/profiles/simon-dupree.jpeg")}
-                  alt="simon"
-                />
-                <Link to="">
-                  <img
-                    src={require("../../assets/profiles/image 2.svg")}
-                    alt="github"
-                  />
-                </Link>
-              </ProfileHeader>
-              <h3>Michael Watts</h3>
-              <p>
-                Text to go here all about what makes us super amazing and
-                everything else that we do. Clicking the link below would then
-                take it to an individual page that has our bio along with a
-                carousel of our work
-              </p>
-              <MemberLink to="/team/:id">Read bio</MemberLink>
-            </Member>
+                  <a href={profile.github} target="_blank">
+                    <img
+                      src={require("../../assets/profiles/image 2.svg")}
+                      alt="github"
+                    />
+                  </a>
+                </ProfileHeader>
+                <h3>{profile.name}</h3>
+                <p>
+                  Text to go here all about what makes us super amazing and
+                  everything else that we do. Clicking the link below would then
+                  take it to an individual page that has our bio along with a
+                  carousel of our work
+                </p>
+                <MemberLink to={`/team/${profile.id}`}>Read bio</MemberLink>
+              </Member>
+            ))}
           </TeamWrapper>
         </SectionWrapper>
         <Footer to="contact" smooth={true} duration={500}>

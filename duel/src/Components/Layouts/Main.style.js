@@ -285,6 +285,58 @@ export const ProfileHeader = styled.div.attrs({
   }
 `;
 
+export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
+  position: relative;
+  .image {
+    position: relative;
+    img {
+      max-width: 150px;
+      max-height: 150px;
+      border-left: 1px var(--black) solid;
+    }
+    /* :after {
+      content: "";
+      position: absolute;
+      border-right: 1px var(--gray) solid;
+      height: calc(100% + 2rem);
+      right: 0;
+    } */
+  }
+
+  /* :after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px var(--gray) solid;
+    width: 100%;
+    max-width: calc(150px + 2rem);
+    /* bottom: 0.25rem; */
+    /* top: 150px; */
+  } */
+`;
+
+export const ProfileDescr = styled.div.attrs({
+  className: "flex"
+})`
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-top: 0;
+  height: 100%;
+
+  p {
+    margin-top: 0;
+  }
+
+  img {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    transition: all ease 0.3s;
+
+    :hover {
+      transform: scale(1.05);
+    }
+  }
+`;
+
 // LINE STYLINGS
 
 const VerticalLine = styled.div.attrs({})`
