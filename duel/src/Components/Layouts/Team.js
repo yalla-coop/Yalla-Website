@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import profiles from "../../profiles.json";
 import Flickity from "react-flickity-component";
-import img from "../../assets/workScreens/EastEnd-Carousel.png";
 
 import {
   ProfileImgDiv,
@@ -83,13 +82,14 @@ export default class Team extends Component {
               options={flickityOptions}
               className="flickity-custom"
             >
-              {work.map(caseStudy => {
+              {work.map((caseStudy, index) => {
                 console.log(caseStudy);
                 return (
-                  <ImageWrapper>
-                    <Link to={`work/${caseStudy.tag}`}>
+                  <ImageWrapper key={index}>
+                    <Link to={`/projects/${caseStudy.tag}`}>
                       <ImageDiv
-                        src={require(`../../assets/workScreens/${
+                        title={caseStudy.tag}
+                        img={require(`../../assets/workScreens/${
                           caseStudy.titleImg
                         }.png`)}
                       />

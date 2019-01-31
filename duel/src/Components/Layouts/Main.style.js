@@ -166,7 +166,7 @@ export const ImageDiv = styled.div.attrs({
   className: "w-100 self-center"
 })`
   background: url(${props => props.img}) center;
-  title: ${props => props.title}
+  title: ${props => props.title};
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;
