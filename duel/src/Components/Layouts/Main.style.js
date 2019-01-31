@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
-import img from "../../assets/workScreens/EastEnd-Carousel.png";
-
 // media queries
 
 const size = {
@@ -77,6 +75,39 @@ export const ContactLink = styled(ScrollLink).attrs({
   }
 `;
 
+export const ExtLink = styled(Link).attrs({
+  className: "no-underline mp-secondary-color"
+})`
+  transition: all 0.5s ease-in-out;
+  :hover {
+    color: var(--primary);
+  }
+  img {
+  }
+
+  :hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const ProjectGalleryLink = styled(Link).attrs({
+  className:
+    "flex justify-center items-center self-center overflow-hidden white no-underline "
+})`
+  text-align: center;
+`;
+
+export const ProjectGalleryFrame = styled.div.attrs({
+  className: "grow hide-child cover bg-center flex justify-center"
+})`
+  height: 200px;
+  width: 300px;
+  background: url(${props => props.img});
+  padding-right: 1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+`;
+
 export const IntroHeader = styled.div.attrs({
   className: "flex flex-column"
 })`
@@ -133,7 +164,8 @@ export const CarousselWrapper = styled.div.attrs({
 export const ImageDiv = styled.div.attrs({
   className: "w-100 self-center"
 })`
-  background: url(${props => props.src}) center;
+  background: url(${props => props.img}) center;
+  title: ${props => props.title}
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;
@@ -149,11 +181,73 @@ export const ImageDiv = styled.div.attrs({
   }
 `;
 
+export const ProjectContainer = styled(Wrapper).attrs({
+  className: "flex flex-column justify-center"
+})`
+  padding-left: 8rem;
+  padding-right: 8rem;
+  position: relative;
+`;
+
+export const ProjectImageDiv = styled.div.attrs({
+  className: "contain bg-center"
+})`
+  background: url(${props => props.img}) center;
+  title: ${props => props.title}
+  background-repeat: no-repeat;
+  height: 400px;
+`;
+
+export const ProjectTextBox = styled.div.attrs({
+  className: "flex flex-column"
+})`
+  padding-left: 6rem;
+  padding-right: 1rem;
+  justify-content: flex-start;
+  p {
+    font-size: 1rem;
+    text-align: right;
+    font-weight: 300;
+  }
+`;
+
+export const ProjectLinkWrapper = styled.div.attrs({
+  className: "flex self-center pt2 mb3 ml3"
+})`
+  a {
+    text-decoration: none;
+    margin-right: 13px;
+    h3 {
+      font-weight: 300;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+  }
+`;
+
+export const ProjectFooter = styled(ScrollLink).attrs({
+  className: "flex justify-center"
+})`
+  bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  img {
+    transform: rotate(90deg);
+  }
+
+  :hover {
+    transform: scale(1.1);
+  }
+`;
+
 export const ContactWrapper = styled.div.attrs({
   className: "flex flex-column items-center"
 })`
   padding-top: 1rem;
-  position: relative p {
+  position: relative;
+
+  p {
     align-self: flex-start;
     padding-left: 6rem;
   }
@@ -161,6 +255,7 @@ export const ContactWrapper = styled.div.attrs({
   a {
     text-decoration: none;
     padding-left: 6rem;
+    position: relative;
     h3 {
       font-weight: 300;
       font-size: 2rem;
@@ -172,7 +267,7 @@ export const ContactWrapper = styled.div.attrs({
       position: absolute;
       bottom: 2.4rem;
       border-bottom: 1px var(--primary) solid;
-      width: calc(100% - 10rem);
+      width: calc(100% + 2rem);
     }
   }
 `;

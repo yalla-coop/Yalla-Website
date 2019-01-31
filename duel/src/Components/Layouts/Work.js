@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Flickity from "react-flickity-component";
+import { Link } from "react-router-dom";
+
+import ProjectJSON from "../../projects.json";
 
 import img from "../../assets/workScreens/EastEnd-Carousel.png";
 
@@ -29,18 +32,20 @@ export default class Work extends Component {
         <SectionWrapper>
           <h2>OUR WORK</h2>
           <CarousselWrapper>
-            <Flickity
-              // disableImagesLoaded={true}
-              options={flickityOptions}
-              className="flickity-custom"
-            >
-              <ImageWrapper>
-                <ImageDiv src={img} />
-              </ImageWrapper>
-              <ImageWrapper>
-                <ImageDiv src={img} />
-              </ImageWrapper>
-              {/* <ImageDiv /> */}
+            <Flickity options={flickityOptions} className="flickity-custom">
+              {ProjectJSON.map((project, index) => {
+                const { Title, TitleImg, Tag } = project;
+                return (
+                  <ImageWrapper key={index}>
+                    <Link to={`/projects/${Tag}`}>
+                      <ImageDiv
+                        title={Title}
+                        img={require(`../../assets/workScreens/${TitleImg}.png`)}
+                      />
+                    </Link>
+                  </ImageWrapper>
+                );
+              })}
             </Flickity>
           </CarousselWrapper>
         </SectionWrapper>
