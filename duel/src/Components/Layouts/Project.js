@@ -73,7 +73,7 @@ export default class Project extends Component {
                     />
                     <BackLink to="/">{`<< back`}</BackLink>
                     <SectionWrapper>
-                      <div className="flex items-center">
+                      <div className="flex items-center project-title">
                         <h2>{Title.toUpperCase()}</h2>
                       </div>
                     </SectionWrapper>

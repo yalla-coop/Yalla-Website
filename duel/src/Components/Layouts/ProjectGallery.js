@@ -2,12 +2,16 @@ import ProjectJSON from "../../projects.json";
 
 import React, { Component } from "react";
 
-import { ProjectGalleryFrame, ProjectGalleryLink } from "./Main.style.js";
+import {
+  ProjectGalleryFrame,
+  ProjectGalleryLink,
+  ProjectGalleryWrapper
+} from "./Main.style.js";
 
 export default class ProjectGallery extends Component {
   render() {
     return (
-      <div>
+      <ProjectGalleryWrapper>
         <section className="cf flex items-center jusitfy-center mt5">
           <h1 className="tc f5 ttu fw3 tracked">Other Projects</h1>
           {ProjectJSON.map(({ Tag, Title, TitleImg, GalleryImg }) => {
@@ -24,7 +28,7 @@ export default class ProjectGallery extends Component {
             );
           })}
         </section>
-      </div>
+      </ProjectGalleryWrapper>
     );
   }
 }
