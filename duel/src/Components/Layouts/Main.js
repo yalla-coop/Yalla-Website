@@ -4,12 +4,12 @@ import Intro from "./Intro";
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
-import { ContactLink } from "./Main.style";
+import { ContactLink, Container } from "./Main.style";
 
 export default class Main extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <ContactLink to="contact" smooth={true} duration={500}>
           contact
         </ContactLink>
@@ -18,7 +18,7 @@ export default class Main extends Component {
         <Work />
         <About />
         <Contact />
-      </div>
+      </Container>
     );
   }
 }

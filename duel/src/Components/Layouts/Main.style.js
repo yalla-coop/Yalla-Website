@@ -1,17 +1,17 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 // media queries
 
 const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px'
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px"
 };
 
 export const device = {
@@ -25,29 +25,47 @@ export const device = {
   desktopL: `(max-width: ${size.desktop})`
 };
 
+export const Container = styled.div`
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+`;
+
 // default wrapper 128px pa left and right
 const Wrapper = styled.div.attrs({})`
   padding-left: 6rem;
   padding-right: 6rem;
   width: 100vw;
+  margin: 0;
+
+  @media (max-width: ${size.tablet}) {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    width: 100vw;
+  }
 `;
 
 export const LandingWrapper = styled(Wrapper).attrs({
-  className: 'vh-100 flex flex-column justify-center'
+  className: "vh-100 flex flex-column justify-center"
 })`
   padding-left: 8rem;
   padding-right: 8rem;
   position: relative;
+
+  @media (max-width: ${size.tablet}) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `;
 
 export const Title = styled.div.attrs({
-  className: 'flex justify-center align-center'
+  className: "flex justify-center align-center"
 })`
   width: 100%;
 `;
 
 export const ContactLink = styled(ScrollLink).attrs({
-  className: 'flex fixed h3 items-end mp-secondary-color'
+  className: "flex fixed h3 items-end mp-secondary-color"
 })`
   right: 9rem;
   cursor: pointer;
@@ -57,7 +75,7 @@ export const ContactLink = styled(ScrollLink).attrs({
   transition: all 0.5s ease-in-out;
 
   :after {
-    content: ' ';
+    content: " ";
     position: absolute;
     bottom: 0.25rem;
     border-bottom: 1px var(--secondary) solid;
@@ -73,10 +91,14 @@ export const ContactLink = styled(ScrollLink).attrs({
       width: calc(100% + 9rem);
     }
   }
+  @media (max-width: ${size.tablet}) {
+    left: 1rem;
+    height: 3rem;
+  }
 `;
 
 export const ExtLink = styled.a.attrs({
-  className: 'no-underline mp-secondary-color'
+  className: "no-underline mp-secondary-color"
 })`
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -93,13 +115,13 @@ export const ExtLink = styled.a.attrs({
 
 export const ProjectGalleryLink = styled(Link).attrs({
   className:
-    'flex justify-center items-center self-center overflow-hidden white no-underline '
+    "flex justify-center items-center self-center overflow-hidden white no-underline "
 })`
   text-align: center;
 `;
 
 export const ProjectGalleryFrame = styled.div.attrs({
-  className: 'grow hide-child cover bg-center flex justify-center'
+  className: "grow hide-child cover bg-center flex justify-center"
 })`
   height: 200px;
   width: 300px;
@@ -110,17 +132,21 @@ export const ProjectGalleryFrame = styled.div.attrs({
 `;
 
 export const IntroHeader = styled.div.attrs({
-  className: 'flex flex-column'
+  className: "flex flex-column"
 })`
   height: 100%;
   padding-top: 8rem;
   justify-content: flex-start;
   padding-left: 1rem;
   padding-right: 1rem;
+
+  @media (max-width: ${size.tablet}) {
+    padding-top: 4rem;
+  }
 `;
 
 export const IntroTextWrapper = styled.div.attrs({
-  className: 'flex flex-column'
+  className: "flex flex-column"
 })`
   padding-left: 6rem;
   padding-top: 1rem;
@@ -133,10 +159,11 @@ export const IntroTextWrapper = styled.div.attrs({
 `;
 
 export const SectionWrapper = styled.div.attrs({
-  className: 'flex flex-column'
+  className: "flex flex-column"
 })`
   height: 100%;
   padding-top: 2.45rem;
+  width: 100%;
   h2 {
     -webkit-text-stroke: 1px var(--secondary);
     color: var(--white);
@@ -144,14 +171,14 @@ export const SectionWrapper = styled.div.attrs({
   }
 `;
 
-export const ImageWrapper = styled.div.attrs({ className: 'w-100' })`
+export const ImageWrapper = styled.div.attrs({ className: "w-100" })`
   padding: 3rem;
   padding-left: 0;
   /* height: 400px; */
 `;
 
 export const CarousselWrapper = styled.div.attrs({
-  className: 'w-80 flex flex-column self-center'
+  className: "w-80 flex flex-column self-center"
 })`
   .flickity-custom {
     transition: all 0.5s ease;
@@ -163,7 +190,7 @@ export const CarousselWrapper = styled.div.attrs({
 `;
 
 export const ImageDiv = styled.div.attrs({
-  className: 'w-100 self-center'
+  className: "w-100 self-center"
 })`
   background: url(${props => props.img}) center;
   title: ${props => props.title};
@@ -183,7 +210,7 @@ export const ImageDiv = styled.div.attrs({
 `;
 
 export const ProjectContainer = styled(Wrapper).attrs({
-  className: 'flex flex-column justify-center'
+  className: "flex flex-column justify-center"
 })`
   padding-left: 8rem;
   padding-right: 8rem;
@@ -191,7 +218,7 @@ export const ProjectContainer = styled(Wrapper).attrs({
 `;
 
 export const ProjectImageDiv = styled.div.attrs({
-  className: 'contain'
+  className: "contain"
 })`
   background: url(${props => props.img}) center;
   title: ${props => props.title};
@@ -201,7 +228,7 @@ export const ProjectImageDiv = styled.div.attrs({
 `;
 
 export const ProjectTextBox = styled.div.attrs({
-  className: 'flex flex-column'
+  className: "flex flex-column"
 })`
   padding-left: 6rem;
   padding-right: 1rem;
@@ -214,7 +241,7 @@ export const ProjectTextBox = styled.div.attrs({
 `;
 
 export const ProjectLinkWrapper = styled.div.attrs({
-  className: 'flex self-center mb3 ml3'
+  className: "flex self-center mb3 ml3"
 })`
   a {
     text-decoration: none;
@@ -228,7 +255,7 @@ export const ProjectLinkWrapper = styled.div.attrs({
 `;
 
 export const ProjectFooter = styled(ScrollLink).attrs({
-  className: 'flex justify-center'
+  className: "flex justify-center"
 })`
   bottom: 1rem;
   cursor: pointer;
@@ -244,7 +271,7 @@ export const ProjectFooter = styled(ScrollLink).attrs({
 `;
 
 export const ContactWrapper = styled.div.attrs({
-  className: 'flex flex-column items-center'
+  className: "flex flex-column items-center"
 })`
   padding-top: 1rem;
   position: relative;
@@ -265,17 +292,32 @@ export const ContactWrapper = styled.div.attrs({
     }
 
     :after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 2.4rem;
       border-bottom: 1px var(--primary) solid;
       width: calc(100% + 2rem);
     }
   }
+
+  @media (max-width: ${size.tablet}) {
+    p {
+      padding-left: 0rem;
+    }
+
+    a {
+      padding-left: 0rem;
+      align-self: flex-start;
+
+      :after {
+        position: relative;
+      }
+    }
+  }
 `;
 
 export const Footer = styled(ScrollLink).attrs({
-  className: 'flex justify-center'
+  className: "flex justify-center"
 })`
   position: absolute;
   bottom: 1rem;
@@ -292,10 +334,18 @@ export const Footer = styled(ScrollLink).attrs({
   }
 `;
 
+export const AboutWrapper = styled(LandingWrapper)`
+  height: auto;
+`;
+
 export const TeamWrapper = styled.div.attrs({
-  className: 'flex justify-center items-center w-100 pa2 h-100'
+  className: "flex justify-center items-center w-100 pa2 h-100"
 })`
   padding-bottom: 4rem;
+
+  @media (max-width: ${size.tablet}) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Member = styled.div.attrs({})`
@@ -304,6 +354,11 @@ export const Member = styled.div.attrs({})`
   margin-right: 0.5rem;
   height: 100%;
   font-weight: 300;
+
+  @media (max-width: ${size.tablet}) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 
   h3 {
     color: var(--secondary);
@@ -322,7 +377,7 @@ export const MemberLink = styled(Link)`
   position: relative;
 
   :after {
-    content: ' ';
+    content: " ";
     position: absolute;
     left: 0;
     bottom: 0.25rem;
@@ -342,7 +397,7 @@ export const MemberLink = styled(Link)`
 `;
 
 export const ProfileImgDiv = styled.div.attrs({
-  className: ''
+  className: ""
 })`
   background: url(${props => props.src}) center;
   background-repeat: no-repeat;
@@ -358,7 +413,7 @@ export const ProfileImgDiv = styled.div.attrs({
     opacity: 1;
   }
   :after {
-    content: '';
+    content: "";
     position: absolute;
     border-bottom: 1px var(--gray) solid;
     width: calc(100% + 30%);
@@ -367,7 +422,7 @@ export const ProfileImgDiv = styled.div.attrs({
 `;
 
 export const ProfileHeader = styled.div.attrs({
-  className: 'flex'
+  className: "flex"
 })`
   align-items: flex-end;
 
@@ -383,13 +438,13 @@ export const ProfileHeader = styled.div.attrs({
 `;
 
 export const HeadlineDiv = styled.div.attrs({
-  className: 'flex flex-column items-center mt6'
+  className: "flex flex-column items-center mt6"
 })`
   h2 {
   }
 `;
 
-export const ProfileWrapper = styled.div.attrs({ className: 'flex' })`
+export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
   position: relative;
   .image {
     position: relative;
@@ -419,7 +474,7 @@ export const ProfileWrapper = styled.div.attrs({ className: 'flex' })`
 `;
 
 export const ProfileDescr = styled.div.attrs({
-  className: 'flex'
+  className: "flex"
 })`
   flex-direction: column;
   padding-left: 1rem;
@@ -476,6 +531,10 @@ export const LeftLine = styled(VerticalLine)`
   top: ${props => props.top};
   left: ${props => props.left};
   border-color: ${props => props.borderColor};
+
+  @media (max-width: ${size.tablet}) {
+    left: 0;
+  }
 `;
 
 export const RightLine = styled(VerticalLine).attrs({})`
@@ -484,6 +543,10 @@ export const RightLine = styled(VerticalLine).attrs({})`
   right: ${props => props.right};
   bottom: ${props => props.bottom};
   border-color: ${props => props.borderColor};
+
+  @media (max-width: ${size.tablet}) {
+    right: 0rem;
+  }
 `;
 
 export const BottomLine = styled(HorizontalLine).attrs({})`
@@ -493,6 +556,10 @@ export const BottomLine = styled(HorizontalLine).attrs({})`
   -webkit-box-shadow: -8px 6px 0px 0px var(--primary);
   -moz-box-shadow: -8px 6px 0px 0px var(--primary);
   box-shadow: -8px 6px 0px 0px var(--primary);
+
+  @media (max-width: ${size.tablet}) {
+    width: 0;
+  }
 `;
 
 export const TopLine = styled(HorizontalLine).attrs({})`
@@ -503,9 +570,17 @@ export const TopLine = styled(HorizontalLine).attrs({})`
   -webkit-box-shadow: -8px -6px 0px 0px var(--secondary);
   -moz-box-shadow: -8px -6px 0px 0px var(--secondary);
   box-shadow: -8px -6px 0px 0px var(--secondary);
+
+  @media (max-width: ${size.tablet}) {
+    width: 0;
+  }
 `;
 export const TopLineNarrow = styled(HorizontalLine).attrs({})`
   left: ${props => props.left};
   width: ${props => props.width};
   top: ${props => props.top};
+
+  @media (max-width: ${size.tablet}) {
+    width: 0;
+  }
 `;
