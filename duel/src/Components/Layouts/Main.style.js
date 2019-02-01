@@ -120,6 +120,12 @@ export const ProjectGalleryLink = styled(Link).attrs({
   text-align: center;
 `;
 
+export const ProjectGalleryWrapper = styled.div`
+  @media (max-width: ${size.tablet}) {
+    display: none;
+  }
+`;
+
 export const ProjectGalleryFrame = styled.div.attrs({
   className: "grow hide-child cover bg-center flex justify-center"
 })`
@@ -169,6 +175,13 @@ export const SectionWrapper = styled.div.attrs({
     color: var(--white);
     font-size: 2rem;
   }
+
+  @media (max-width: ${size.tablet}) {
+    .project-title {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 `;
 
 export const ImageWrapper = styled.div.attrs({ className: "w-100" })`
@@ -215,6 +228,13 @@ export const ProjectContainer = styled(Wrapper).attrs({
   padding-left: 8rem;
   padding-right: 8rem;
   position: relative;
+
+  @media (max-width: ${size.tablet}) {
+    padding-left: 0;
+    h3 {
+      padding-left: 1rem;
+    }
+  }
 `;
 
 export const ProjectImageDiv = styled.div.attrs({
@@ -267,6 +287,10 @@ export const ProjectFooter = styled(ScrollLink).attrs({
 
   :hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: ${size.tablet}) {
+    display: none;
   }
 `;
 
@@ -440,6 +464,10 @@ export const ProfileHeader = styled.div.attrs({
 export const HeadlineDiv = styled.div.attrs({
   className: "flex flex-column items-center mt6"
 })`
+  @media (max-width: ${size.tablet}) {
+    margin-top: 1rem;
+  }
+
   h2 {
   }
 `;
@@ -453,6 +481,8 @@ export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
       max-height: 150px;
       border-left: 1px var(--black) solid;
     }
+
+    
     /* :after {
       content: "";
       position: absolute;
@@ -461,7 +491,16 @@ export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
       right: 0;
     } */
   }
+  @media (max-width: ${size.tablet}) { 
+      flex-direction: column;
+      height: 100%;
 
+      .image { 
+        width: 100vw; 
+        padding-left: 0rem;
+      }
+
+    }
   /* :after {
     content: "";
     position: absolute;
@@ -501,6 +540,10 @@ export const ProfileDescr = styled.div.attrs({
   div {
     display: flex;
   }
+
+  @media (max-width: ${size.tablet}) {
+    padding-left: 0;
+  }
 `;
 
 export const BackLink = styled(Link).attrs({})`
@@ -534,6 +577,7 @@ export const LeftLine = styled(VerticalLine)`
 
   @media (max-width: ${size.tablet}) {
     left: 0;
+    display: none;
   }
 `;
 
@@ -546,6 +590,7 @@ export const RightLine = styled(VerticalLine).attrs({})`
 
   @media (max-width: ${size.tablet}) {
     right: 0rem;
+    display: none;
   }
 `;
 
