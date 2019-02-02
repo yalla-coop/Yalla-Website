@@ -185,8 +185,8 @@ export const SectionWrapper = styled.div.attrs({
 `;
 
 export const ImageWrapper = styled.div.attrs({ className: "w-100" })`
-  padding: 3rem;
-  padding-left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   /* height: 400px; */
 `;
 
@@ -359,6 +359,14 @@ export const Footer = styled(ScrollLink).attrs({
 `;
 
 export const AboutWrapper = styled(LandingWrapper)`
+  min-height: 100vh;
+
+  @media (max-width: ${size.tablet}) {
+    height: auto;
+  }
+`;
+
+export const TeamMemberWrapper = styled(LandingWrapper)`
   height: auto;
 `;
 
@@ -462,10 +470,14 @@ export const ProfileHeader = styled.div.attrs({
 `;
 
 export const HeadlineDiv = styled.div.attrs({
-  className: "flex flex-column items-center mt6"
+  className: "flex flex-column items-center mt1"
 })`
   @media (max-width: ${size.tablet}) {
     margin-top: 1rem;
+
+    h2 {
+      margin-bottom: 0;
+    }
   }
 
   h2 {
@@ -518,7 +530,7 @@ export const ProfileDescr = styled.div.attrs({
   flex-direction: column;
   padding-left: 1rem;
   padding-top: 0;
-  height: 100%;
+  height: auto;
 
   p {
     margin-top: 0;
