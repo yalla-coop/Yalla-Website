@@ -16,7 +16,8 @@ import {
   ImageDiv,
   BackLink,
   HeadlineDiv,
-  AboutWrapper
+  AboutWrapper,
+  TeamMemberWrapper
 } from "./Main.style.js";
 
 const flickityOptions = {
@@ -48,7 +49,7 @@ export default class Team extends Component {
       console.log(profile);
       const { name, github, linkedin, bio, imgName, work } = profile;
       return (
-        <AboutWrapper id="about">
+        <TeamMemberWrapper id="about">
           <LeftLine top="0" height="20rem" />
           <TopLineNarrow left="-1rem" width="calc(100% + 2rem)" top="6rem" />
           <BackLink to="/">{`<< back`}</BackLink>
@@ -104,7 +105,7 @@ export default class Team extends Component {
               })}
             </Flickity>
           </SectionWrapper>
-        </AboutWrapper>
+        </TeamMemberWrapper>
       );
     }
   }
