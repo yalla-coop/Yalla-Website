@@ -1,0 +1,4 @@
+[build]
+base = "duel/"
+publish = "duel/build/"
+command = "npm run build"
