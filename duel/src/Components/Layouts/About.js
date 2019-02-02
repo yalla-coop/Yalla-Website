@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 import profiles from "../../profiles.json";
 
 import {
-  LandingWrapper,
   LeftLine,
-  RightLine,
   TopLineNarrow,
   SectionWrapper,
   Footer,
@@ -15,13 +12,11 @@ import {
   MemberLink,
   ProfileImgDiv,
   ProfileHeader,
-  BottomLine,
   AboutWrapper
 } from "./Main.style.js";
 
 export default class About extends Component {
   render() {
-    profiles.map(profile => console.log(profile));
     return (
       <AboutWrapper id="about">
         <LeftLine top="0" height="8rem" />
@@ -29,8 +24,8 @@ export default class About extends Component {
         <SectionWrapper>
           <h2>ABOUT US</h2>
           <TeamWrapper>
-            {profiles.map(profile => (
-              <Member>
+            {profiles.map((profile, index) => (
+              <Member key={index}>
                 <ProfileHeader>
                   <ProfileImgDiv
                     src={require(`../../assets/profiles/${

@@ -17,7 +17,7 @@ export default class Landing extends Component {
         <TopLine left="-4rem" width="calc(100% + 9rem)" top="6rem" />
         <LeftLine height="80%" top="0" />
         <IntroHeader>
-          <img src={require("../../assets/HeaderIntro.svg")} />
+          <img src={require("../../assets/HeaderIntro.svg")} alt="header" />
           <IntroTextWrapper>
             <p>
               Hi, we’re a collective of freelance web developers and designers,
@@ -25,10 +25,10 @@ export default class Landing extends Component {
               charities, not-for-profits, start ups and businesses, creating
               digital solutions with an emphasis on driving positive social
               impact through everything we do.{" "}
-              <p>
-                So whether you're looking for a new website, an app, UX design,
-                workshops or anything similar, drop us an email and we can chat.
-              </p>
+            </p>
+            <p>
+              So whether you're looking for a new website, an app, UX design,
+              workshops or anything similar, drop us an email and we can chat.
             </p>
           </IntroTextWrapper>
         </IntroHeader>
