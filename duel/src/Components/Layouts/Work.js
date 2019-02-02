@@ -8,7 +8,6 @@ import img from "../../assets/workScreens/EastEnd-Carousel.png";
 
 import {
   LandingWrapper,
-  LeftLine,
   RightLine,
   TopLineNarrow,
   SectionWrapper,

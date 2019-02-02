@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 import ProjectJSON from "../../projects.json";
 import ProjectGallery from "./ProjectGallery";
