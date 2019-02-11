@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import {
   LandingWrapper,
@@ -7,7 +7,7 @@ import {
   TopLineNarrow,
   SectionWrapper,
   ContactWrapper
-} from './Main.style.js';
+} from "./Main.style.js";
 
 export default class Contact extends Component {
   render() {
@@ -26,7 +26,7 @@ export default class Contact extends Component {
           <ContactWrapper>
             <p>Want to chat a bit more?</p>
             <p>Please get in touch below:</p>
-            <a href="mailto:sup@yalla.coop">
+            <a href="mailto:hello@yallacooperative.com">
               <h3>email: hello@yallacooperative.com</h3>
             </a>
           </ContactWrapper>
