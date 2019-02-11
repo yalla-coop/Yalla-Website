@@ -8,6 +8,7 @@ const size = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
+  mobileXL: "680px",
   tablet: "768px",
   laptop: "1024px",
   laptopL: "1440px",
@@ -18,6 +19,7 @@ export const device = {
   mobileS: `(max-width: ${size.mobileS})`,
   mobileM: `(max-width: ${size.mobileM})`,
   mobileL: `(max-width: ${size.mobileL})`,
+  mobileXL: `(max-width: ${size.mobileXL})`,
   tablet: `(max-width: ${size.tablet})`,
   laptop: `(max-width: ${size.laptop})`,
   laptopL: `(max-width: ${size.laptopL})`,
@@ -181,18 +183,22 @@ export const SectionWrapper = styled.div.attrs({
       padding-left: 1rem;
       padding-right: 1rem;
     }
+    h2 {
+      margin-bottom: auto;
+    }
   }
 `;
 
 export const ImageWrapper = styled.div.attrs({ className: "w-100" })`
   padding-left: 2rem;
   padding-right: 2rem;
-  /* height: 400px; */
 `;
 
 export const CarousselWrapper = styled.div.attrs({
-  className: "w-80 flex flex-column self-center"
+  className: "flex flex-column self-center"
 })`
+  margin-top: 2rem;
+  width: 100%;
   .flickity-custom {
     transition: all 0.5s ease;
 
@@ -203,22 +209,80 @@ export const CarousselWrapper = styled.div.attrs({
 `;
 
 export const ImageDiv = styled.div.attrs({
-  className: "w-100 self-center"
+  className: "w-100 flex self-center"
 })`
   background: url(${props => props.img}) center;
   title: ${props => props.title};
   background-repeat: no-repeat;
   background-size: contain;
   height: 400px;
+`;
 
-  @media ${device.tablet} {
-    height: 300px;
+export const MobileContainer = styled.div.attrs({
+  className: "flex flex-column justify-center"
+})`
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: auto;
+
+  @media ${device.mobileL} {
+    margin-top: 10px;
+  }
+  @media ${device.mobileM} {
+    margin-top: 30px;
+  }
+  @media ${device.mobileS} {
+    margin-top: 100px;
+  }
+`;
+
+export const MobileSectionWrapper = styled.div.attrs({
+  className: "flex flex-column"
+})`
+  height: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  h3 {
+    text-align: center
+    -webkit-text-stroke: 1px var(--secondary);
+    color: var(--secondary);
+    // font-size: 1.3 rem;
+  }
+  a {
+    font-size: 0.9rem;
+    text-align: left;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+`;
+
+export const MobileImageDiv = styled.div.attrs({
+  className: "flex self-center"
+})`
+  background: url(${props => props.img}) center;
+  title: ${props => props.title};
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+
+  :hover {
+    transform: scale(1.05);
+  }
+  @media ${device.mobileXL} {
+    height: 400px;
   }
   @media ${device.mobileL} {
+    height: 300px;
+  }
+  @media ${device.mobileM} {
     height: 250px;
   }
   @media ${device.mobileS} {
-    height: 100px;
+    height: 150px;
   }
 `;
 
@@ -355,6 +419,9 @@ export const Footer = styled(ScrollLink).attrs({
 
   :hover {
     transform: scale(1.1);
+  }
+  @media (max-width: ${size.tablet}) {
+    display: none;
   }
 `;
 
@@ -494,7 +561,7 @@ export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
       border-left: 1px var(--black) solid;
     }
 
-    
+
     /* :after {
       content: "";
       position: absolute;
@@ -503,12 +570,12 @@ export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
       right: 0;
     } */
   }
-  @media (max-width: ${size.tablet}) { 
+  @media (max-width: ${size.tablet}) {
       flex-direction: column;
       height: 100%;
 
-      .image { 
-        width: 100vw; 
+      .image {
+        width: 100vw;
         padding-left: 0rem;
       }
 
