@@ -1,11 +1,11 @@
 /* Fonts */
 /* headerText */
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 h1,
 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body,
@@ -14,7 +14,7 @@ html {
   margin: 0;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--black);
 }
 
@@ -168,11 +168,11 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 
 .flickity-button.next {
-  background: url("./assets/Right-Arrows.svg");
+  background: url('./assets/Right-Arrows.svg');
 }
 
 .flickity-button.previous {
-  background: url("./assets/Left-Arrows.svg");
+  background: url('./assets/Left-Arrows.svg');
 }
 
 .flickity-prev-next-button {

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import profiles from "../../profiles.json";
+import profiles from '../../profiles.json';
 
 import {
   LeftLine,
@@ -13,7 +13,7 @@ import {
   ProfileImgDiv,
   ProfileHeader,
   AboutWrapper
-} from "./Main.style.js";
+} from './Main.style.js';
 
 export default class About extends Component {
   render() {
@@ -35,20 +35,20 @@ export default class About extends Component {
                   />
                   <a href={profile.github} target="_blank">
                     <img
-                      src={require("../../assets/profiles/image 2.svg")}
+                      src={require('../../assets/profiles/image 2.svg')}
                       alt="github"
                     />
                   </a>
                 </ProfileHeader>
                 <h3>{profile.name}</h3>
-                <p>{profile.teaser}</p>
+                {/* <p>{profile.teaser}</p> */}
                 <MemberLink to={`/team/${profile.id}`}>Read bio</MemberLink>
               </Member>
             ))}
           </TeamWrapper>
         </SectionWrapper>
         <Footer to="contact" smooth={true} duration={500}>
-          <img src={require("../../assets/Right-Arrows.svg")} alt="arrow" />
+          <img src={require('../../assets/Right-Arrows.svg')} alt="arrow" />
         </Footer>
       </AboutWrapper>
     );

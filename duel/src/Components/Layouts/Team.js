@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import profiles from "../../profiles.json";
-import Flickity from "react-flickity-component";
+import profiles from '../../profiles.json';
+import Flickity from 'react-flickity-component';
 
 import {
   ProfileImgDiv,
@@ -17,8 +17,9 @@ import {
   BackLink,
   HeadlineDiv,
   AboutWrapper,
-  TeamMemberWrapper
-} from "./Main.style.js";
+  TeamMemberWrapper,
+  FlickityContainer
+} from './Main.style.js';
 
 const flickityOptions = {
   prevNextButtons: true,
@@ -34,7 +35,7 @@ export default class Team extends Component {
   };
   componentDidMount() {
     const pathname = window.location.href;
-    const id = pathname.split("/")[4];
+    const id = pathname.split('/')[4];
     console.log(pathname);
     console.log(id);
     const profile = profiles.filter(profile => profile && profile.id === id);
@@ -67,13 +68,13 @@ export default class Team extends Component {
                 <div>
                   <a href={github} target="_blank">
                     <img
-                      src={require("../../assets/profiles/image 2.svg")}
+                      src={require('../../assets/profiles/image 2.svg')}
                       alt="github"
                     />
                   </a>
                   <a href={linkedin} target="_blank">
                     <img
-                      src={require("../../assets/profiles/linkedin-5.svg")}
+                      src={require('../../assets/profiles/linkedin-5.svg')}
                       alt="linkedin"
                     />
                   </a>
@@ -81,29 +82,31 @@ export default class Team extends Component {
               </ProfileDescr>
             </ProfileWrapper>
             <HeadlineDiv>
-              <h2>{name.split(" ")[0]}'s Projects</h2>
+              <h2>{name.split(' ')[0]}'s Projects</h2>
             </HeadlineDiv>
-            <Flickity
-              // disableImagesLoaded={true}
-              options={flickityOptions}
-              className="flickity-custom"
-            >
-              {work.map((caseStudy, index) => {
-                console.log(caseStudy);
-                return (
-                  <ImageWrapper key={index}>
-                    <Link to={`/projects/${caseStudy.tag}`}>
-                      <ImageDiv
-                        title={caseStudy.tag}
-                        img={require(`../../assets/workScreens/${
-                          caseStudy.titleImg
-                        }.png`)}
-                      />
-                    </Link>
-                  </ImageWrapper>
-                );
-              })}
-            </Flickity>
+            <FlickityContainer>
+              <Flickity
+                // disableImagesLoaded={true}
+                options={flickityOptions}
+                className="flickity-custom"
+              >
+                {work.map((caseStudy, index) => {
+                  console.log(caseStudy);
+                  return (
+                    <ImageWrapper key={index}>
+                      <Link to={`/projects/${caseStudy.tag}`}>
+                        <ImageDiv
+                          title={caseStudy.tag}
+                          img={require(`../../assets/workScreens/${
+                            caseStudy.titleImg
+                          }.png`)}
+                        />
+                      </Link>
+                    </ImageWrapper>
+                  );
+                })}
+              </Flickity>
+            </FlickityContainer>
           </SectionWrapper>
         </TeamMemberWrapper>
       );
