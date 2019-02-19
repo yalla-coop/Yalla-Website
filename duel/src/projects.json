@@ -4,7 +4,6 @@
     "Category": "Mental Health",
     "Teaser": "Aims to improve internal monitoring activities to ensure that training sessions are effective.",
     "Client": "Built for Connect 5",
-    "About the Client": "Connect 5 is a UK-wide mental health promotion training programme developed from a unique collaboration between Public Health England (PHE) & Health Education England (HEE). It is designed to increase the confidence and core skills of front line staff so that they can be more effective in having conversations about mental health and wellbeing.",
     "Description1": "A tool that creates and shares survey forms. Incoming results are being collected, visualised and can be downloaded.",
     "Description2": "Users can gain insights about their teaching outcomes over time.",
     "Duration": "October 2018",
@@ -14,14 +13,13 @@
     "Tag": "connect5",
     "TitleImg": "Connect5-Carousel",
     "GalleryImg": "connect5-gallery",
-    "Testimonial": "... the people building my app (both here in London and in Gaza) demonstrated high quality levels of attention and application to produce a product which exactly serves my project’s needs (Elysabeth Williams Connect5 national lead)"
+    "Testimonial": "The people building my app (both here in London and in Gaza) demonstrated high quality levels of attention and application to produce a product which exactly serves my project’s needs (Elysabeth Williams Connect5 national lead)"
   },
   {
     "Title": "My Pickle",
     "Category": "Mental health",
     "Teaser": "Connector for people offering support and individuals looking for support",
     "Client": "Build for MyPickle",
-    "About the Client": "My Pickle is a nonprofit social enterprise platform that helps people find support. In doing so, funds are raised to help more people access the services they need & support VCS services.",
     "Description1": "A proof-of-concept testing the idea to create an Integrated Wellness Platform.",
     "Description2": "Extensive sign-up process, profile builder, blog and CMS",
     "Duration": "December 2018 - January 2019",
@@ -37,7 +35,6 @@
     "Category": "Tech for Better",
     "Teaser": "An online network connecting local government and SMEs.",
     "Client": "Sleuth",
-    "About the Client": "Sleuth is a co-operative consultancy delivering simple, practical solutions to complex problems, using technology and information​​​​​​​.",
     "Description1": "Bespoke profile builder to guide SMEs to provide useful information and market their product, so local government can easily discover and understand what they offer.",
     "Description2": "This marketplace will help speed up innovation in the public sector and increase market share for SMEs",
     "Duration": "October 2018",
@@ -63,5 +60,20 @@
     "Tag": "rent-check",
     "TitleImg": "EastEnd-Carousel",
     "GalleryImg": "eastend-gallery"
+  },
+  {
+    "Title": "Nightingale",
+    "Category": "Tech for Better",
+    "Teaser": "An app that aims to help students reflect on their emotions and work out what's affecting them at school",
+    "Client": "Built for Nightingale",
+    "Description1": "Chat-bot like app focussing on the relation between school and mental health",
+    "Description2": "Guided conversation flow about feelings and experiences combined with incentives to self-reflect",
+    "Duration": "January-February 2019",
+    "Developers": ["Joe", "Simon", "Ramy", "Assala"],
+    "GitHub": "https://github.com/techforbetter/nightingale",
+    "Website": "https://botnightingale.herokuapp.com/",
+    "Tag": "nightingale",
+    "TitleImg": "Nightingale-Carousel",
+    "GalleryImg": "Nightingale-gallery"
   }
 ]
