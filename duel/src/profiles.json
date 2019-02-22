@@ -30,19 +30,6 @@
     ]
   },
   {
-    "name": "Michael Watts",
-    "github": "https://github.com/arrested-developer",
-    "linkedin": "https://www.linkedin.com/in/michael-watts-507126158/",
-    "teaser": "Full stack developer with a strong mind for code and a deep love of problem solving.",
-    "bio": "Full stack developer with a strong mind for code and a deep love of problem solving. Experience with Node, React, Express, PHP. Fast learner and excellent communicator. Proud owner of a 🐶 named after a 🐟.",
-    "id": "michaelwatts",
-    "imgName": "michael-watts",
-    "work": [
-      { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
-      { "tag": "connect5", "titleImg": "Connect5-Carousel" }
-    ]
-  },
-  {
     "name": "Ramy Shurafa",
     "github": " https://github.com/RamyAlshurafa",
     "linkedin": "https://www.linkedin.com/in/ramy-shurafa-328539164/",
@@ -52,6 +39,19 @@
     "imgName": "ramy-shurafa",
     "work": [
       { "tag": "nightingale", "titleImg": "Nightingale-Carousel" },
+      { "tag": "connect5", "titleImg": "Connect5-Carousel" }
+    ]
+  },
+  {
+    "name": "Michael Watts",
+    "github": "https://github.com/arrested-developer",
+    "linkedin": "https://www.linkedin.com/in/michael-watts-507126158/",
+    "teaser": "Full stack developer with a strong mind for code and a deep love of problem solving.",
+    "bio": "Full stack developer with a strong mind for code and a deep love of problem solving. Experience with Node, React, Express, PHP. Fast learner and excellent communicator. Proud owner of a 🐶 named after a 🐟.",
+    "id": "michaelwatts",
+    "imgName": "michael-watts",
+    "work": [
+      { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
       { "tag": "connect5", "titleImg": "Connect5-Carousel" }
     ]
   },
