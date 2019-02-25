@@ -656,6 +656,30 @@ export const BackLink = styled(Link).attrs({})`
   font-weight: 300;
 `;
 
+export const ClientsWrapper = styled(LandingWrapper)`
+  min-height: 100vh;
+
+  @media (max-width: ${size.tablet}) {
+    height: auto;
+  }
+`;
+
+export const LogoWrapper = styled.div.attrs({
+  className: 'flex-wrap justify-center'
+})`
+  padding-top: 2rem;
+  @media (max-width: ${size.tablet}) {
+  }
+`;
+
+export const LogoDiv = styled.img.attrs({})`
+  margin: 4rem;
+
+  @media (max-width: ${size.tablet}) {
+    margin: 2rem;
+  }
+`;
+
 // LINE STYLINGS
 
 const VerticalLine = styled.div.attrs({})`
