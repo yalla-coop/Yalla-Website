@@ -5,9 +5,7 @@ import profiles from '../../profiles.json';
 import Flickity from 'react-flickity-component';
 
 import {
-  ProfileImgDiv,
   LeftLine,
-  LandingWrapper,
   TopLineNarrow,
   SectionWrapper,
   ProfileWrapper,
@@ -16,7 +14,6 @@ import {
   ImageDiv,
   BackLink,
   HeadlineDiv,
-  AboutWrapper,
   TeamMemberWrapper,
   FlickityContainer
 } from './Main.style.js';
@@ -47,7 +44,6 @@ export default class Team extends Component {
     const { profile, loaded } = this.state;
     if (!loaded) return <h1>Loading...</h1>;
     else {
-      console.log(profile);
       const { name, github, linkedin, bio, imgName, work } = profile;
       return (
         <TeamMemberWrapper id="about">
@@ -66,13 +62,13 @@ export default class Team extends Component {
               <ProfileDescr>
                 <p>{bio}</p>
                 <div>
-                  <a href={github} target="_blank">
+                  <a href={github} rel="noreferrer noopener" target="_blank">
                     <img
                       src={require('../../assets/profiles/image 2.svg')}
                       alt="github"
                     />
                   </a>
-                  <a href={linkedin} target="_blank">
+                  <a href={linkedin} rel="noreferrer noopener" target="_blank">
                     <img
                       src={require('../../assets/profiles/linkedin-5.svg')}
                       alt="linkedin"

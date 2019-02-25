@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import ProjectJSON from "../../projects.json";
-import ProjectGallery from "./ProjectGallery";
+import ProjectJSON from '../../projects.json';
+import ProjectGallery from './ProjectGallery';
 import {
   ProjectContainer,
   LeftLine,
@@ -14,7 +14,7 @@ import {
   ProjectTextBox,
   ExtLink,
   BackLink
-} from "./Main.style.js";
+} from './Main.style.js';
 
 const checkTag = (url, tag) => url === tag;
 // function to create a list of names from an array...
@@ -36,7 +36,7 @@ export default class Project extends Component {
     window.scrollTo(0, 0);
   }
   render() {
-    const ProjectName = this.props.location.pathname.split("/")[2];
+    const ProjectName = this.props.location.pathname.split('/')[2];
 
     return (
       <div>
@@ -99,25 +99,18 @@ export default class Project extends Component {
                       duration={500}
                     >
                       <img
-                        src={require("../../assets/Right-Arrows.svg")}
+                        src={require('../../assets/Right-Arrows.svg')}
                         alt="arrow"
                       />
                     </ProjectFooter>
                   </ProjectContainer>
                   <div id="projectGallery">
                     <ProjectGallery />
-                    {/* <ProjectLinkWrapper>
-                      <ExtLink className="self-center" to="/">
-                        <img
-                          src={require("../../assets/Left-Arrows.svg")}
-                          alt="arrow"
-                        />
-                      </ExtLink>
-                    </ProjectLinkWrapper> */}
                   </div>
                 </div>
               );
             }
+            return false;
           }
         )}
       </div>
