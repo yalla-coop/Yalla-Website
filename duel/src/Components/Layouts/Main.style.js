@@ -371,7 +371,7 @@ export const ContactWrapper = styled.div.attrs({
 
   a {
     text-decoration: none;
-    padding-left: 6rem;
+    padding-left: 4rem;
     position: relative;
     h3 {
       font-weight: 300;
@@ -395,6 +395,8 @@ export const ContactWrapper = styled.div.attrs({
 
     a {
       padding-left: 0rem;
+      font-weight: 300;
+      font-size: 1.5rem;
       align-self: flex-start;
 
       :after {
