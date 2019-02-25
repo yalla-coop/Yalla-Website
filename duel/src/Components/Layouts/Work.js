@@ -51,7 +51,7 @@ export default class Work extends Component {
             <h2>OUR WORK</h2>
           </SectionWrapper>
           {ProjectJSON.map((project, index) => {
-            const { Title, TitleImg, Tag, Description1, GalleryImg } = project;
+            const { Title, Tag, Description1, GalleryImg } = project;
             return (
               <div>
                 <MobileSectionWrapper>

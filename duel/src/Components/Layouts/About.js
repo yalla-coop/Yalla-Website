@@ -33,7 +33,11 @@ export default class About extends Component {
                     }.jpeg`)}
                     alt="simon"
                   />
-                  <a href={profile.github} target="_blank">
+                  <a
+                    href={profile.github}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
                     <img
                       src={require('../../assets/profiles/image 2.svg')}
                       alt="github"
@@ -41,7 +45,6 @@ export default class About extends Component {
                   </a>
                 </ProfileHeader>
                 <h3>{profile.name}</h3>
-                {/* <p>{profile.teaser}</p> */}
                 <MemberLink to={`/team/${profile.id}`}>Read bio</MemberLink>
               </Member>
             ))}
