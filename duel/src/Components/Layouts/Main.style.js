@@ -371,7 +371,7 @@ export const ContactWrapper = styled.div.attrs({
 
   a {
     text-decoration: none;
-    padding-left: 6rem;
+    padding-left: 4rem;
     position: relative;
     h3 {
       font-weight: 300;
@@ -395,6 +395,8 @@ export const ContactWrapper = styled.div.attrs({
 
     a {
       padding-left: 0rem;
+      font-weight: 300;
+      font-size: 1.5rem;
       align-self: flex-start;
 
       :after {
@@ -655,6 +657,30 @@ export const BackLink = styled(Link).attrs({})`
   color: var(--secondary);
   cursor: pointer;
   font-weight: 300;
+`;
+
+export const ClientsWrapper = styled(LandingWrapper)`
+  min-height: 100vh;
+
+  @media (max-width: ${size.tablet}) {
+    height: auto;
+  }
+`;
+
+export const LogoWrapper = styled.div.attrs({
+  className: 'flex-wrap justify-center'
+})`
+  padding-top: 2rem;
+  @media (max-width: ${size.tablet}) {
+  }
+`;
+
+export const LogoDiv = styled.img.attrs({})`
+  margin: 4rem;
+
+  @media (max-width: ${size.tablet}) {
+    margin: 2rem;
+  }
 `;
 
 // LINE STYLINGS

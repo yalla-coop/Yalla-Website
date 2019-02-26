@@ -13,6 +13,7 @@
     "Tag": "connect5",
     "TitleImg": "Connect5-Carousel",
     "GalleryImg": "connect5-gallery",
+    "Logo": "c5-logo",
     "Testimonial": "The people building my app (both here in London and in Gaza) demonstrated high quality levels of attention and application to produce a product which exactly serves my project’s needs (Elysabeth Williams Connect5 national lead)"
   },
   {
@@ -28,7 +29,9 @@
     "Website": "https://mypickle.netlify.com/",
     "Tag": "my-pickle",
     "TitleImg": "myPickle-Carousel",
-    "GalleryImg": "myPickle-gallery"
+    "GalleryImg": "myPickle-gallery",
+    "Logo": "myPickle-logo",
+    "Testimonial": "The brief was ambitious and complex but Joe and Simon helped break it down into clear components. The amount of work put in over the festive season and what was produced in the time provided was incredible. The delivered app provides a great resource for talking donors through when seeking funding and a solid base to develop further. The team in London and Gaza were really friendly and I hope to work with them again."
   },
   {
     "Title": "Sleuth",
@@ -43,7 +46,8 @@
     "Website": "http://sleuth-sme.herokuapp.com/",
     "Tag": "sleuth",
     "TitleImg": "Sleuth-Carousel",
-    "GalleryImg": "sleuth-gallery"
+    "GalleryImg": "sleuth-gallery",
+    "Logo": "sleuth-logo"
   },
   {
     "Title": "RentCheck",
@@ -59,7 +63,8 @@
     "Website": "http://eastendtradesguild.herokuapp.com/",
     "Tag": "rent-check",
     "TitleImg": "EastEnd-Carousel",
-    "GalleryImg": "eastend-gallery"
+    "GalleryImg": "eastend-gallery",
+    "Logo": "eatg-logo"
   },
   {
     "Title": "Nightingale",
@@ -74,6 +79,7 @@
     "Website": "https://botnightingale.herokuapp.com/",
     "Tag": "nightingale",
     "TitleImg": "Nightingale-Carousel",
-    "GalleryImg": "Nightingale-gallery"
+    "GalleryImg": "Nightingale-gallery",
+    "Logo": "nightingale-logo"
   }
 ]

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slide from 'react-reveal/Slide';
 
 import profiles from '../../profiles.json';
 
@@ -26,24 +27,27 @@ export default class About extends Component {
           <TeamWrapper>
             {profiles.map((profile, index) => (
               <Member key={index}>
-                <ProfileHeader>
-                  <ProfileImgDiv
-                    src={require(`../../assets/profiles/${
-                      profile.imgName
-                    }.jpeg`)}
-                    alt="simon"
-                  />
-                  <a
-                    href={profile.github}
-                    rel="noreferrer noopener"
-                    target="_blank"
-                  >
-                    <img
-                      src={require('../../assets/profiles/image 2.svg')}
-                      alt="github"
+                <Slide bottom>
+                  <ProfileHeader>
+                    <ProfileImgDiv
+                      src={require(`../../assets/profiles/${
+                        profile.imgName
+                      }.jpeg`)}
+                      alt="simon"
                     />
-                  </a>
-                </ProfileHeader>
+
+                    <a
+                      href={profile.github}
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      <img
+                        src={require('../../assets/profiles/image 2.svg')}
+                        alt="github"
+                      />
+                    </a>
+                  </ProfileHeader>
+                </Slide>
                 <h3>{profile.name}</h3>
                 <MemberLink to={`/team/${profile.id}`}>Read bio</MemberLink>
               </Member>
