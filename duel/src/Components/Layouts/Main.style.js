@@ -675,8 +675,19 @@ export const LogoWrapper = styled.div.attrs({
 export const LogoDiv = styled.img.attrs({})`
   margin: 4rem;
 
+  @media (max-width: ${size.laptop}) {
+    margin: 2rem;
+    width: 200px;
+  }
+
   @media (max-width: ${size.tablet}) {
     margin: 2rem;
+    width: 175px;
+  }
+
+  @media (max-width: ${size.mobileXL}) {
+    margin: 2rem;
+    width: 160px;
   }
 `;
 
