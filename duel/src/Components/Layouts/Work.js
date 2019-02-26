@@ -100,7 +100,7 @@ export default class Work extends Component {
               </Fade>
             </CarousselWrapper>
           </SectionWrapper>
-          <Footer to="about" smooth={true} duration={500}>
+          <Footer to="clients" smooth={true} duration={500}>
             <img src={require('../../assets/Right-Arrows.svg')} alt="arrow" />
           </Footer>
           <RightLine top="0" height="8rem" right="8rem" />

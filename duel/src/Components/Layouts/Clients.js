@@ -20,19 +20,19 @@ export default class Clients extends Component {
       <ClientsWrapper id="clients">
         <TopLineNarrow left="-1rem" width="calc(100% + 2rem)" top="6rem" />
         <SectionWrapper>
+          <h2>Recent Cooperations</h2>
           <Fade top>
-            <h2>Recent Cooperations</h2>
+            <LogoWrapper>
+              {ProjectJSON.map((project, index) => {
+                const { Logo, Testimonial } = project;
+                return (
+                  <LogoDiv
+                    src={require(`../../assets/workScreens/${Logo}.png`)}
+                  />
+                );
+              })}
+            </LogoWrapper>
           </Fade>
-          <LogoWrapper>
-            {ProjectJSON.map((project, index) => {
-              const { Logo, Testimonial } = project;
-              return (
-                <LogoDiv
-                  src={require(`../../assets/workScreens/${Logo}.png`)}
-                />
-              );
-            })}
-          </LogoWrapper>
           {/* <div>
             <p>{Testimonial}</p>
           </div> */}
