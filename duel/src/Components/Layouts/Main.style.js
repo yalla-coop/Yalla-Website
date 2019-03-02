@@ -169,7 +169,7 @@ export const IntroTextWrapper = styled.div.attrs({
 export const SectionWrapper = styled.div.attrs({
   className: "flex flex-column"
 })`
-  height: 100%;
+  height: auto;
   padding-top: 2.45rem;
   width: 100%;
   h2 {
