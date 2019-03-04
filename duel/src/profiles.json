@@ -7,6 +7,7 @@
     "bio": "Having studied and worked in natural resource management and data science he has determined work towards improving social and environmental conditions through the use of technology. Having recently graduated from Founders and Coders Simon is very eager to use his software development skills within Yalla. Experience with Node, React, Express, SQL, MongoDB.",
     "id": "simondupree",
     "imgName": "simon-dupree",
+    "resumeTitle": "simon",
     "work": [
       { "tag": "nightingale", "titleImg": "Nightingale-Carousel" },
       { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
@@ -22,6 +23,7 @@
     "bio": "Joe worked in media and digital advertising where he helped develop Fun Kids into a national award-winning brand and set up an influencer marketing division for one of the UK’s leading  agencies. Having spent most of his career working where technology and young people intersect, Joe is keen to develop technology in a responsible way that will help drive positive, sustainable change. Experience with Node, React, Express, SQL, MongoDB.",
     "id": "joefriel",
     "imgName": "joe-friel",
+    "resumeTitle": "joe",
     "work": [
       { "tag": "nightingale", "titleImg": "Nightingale-Carousel" },
       { "tag": "connect5", "titleImg": "Connect5-Carousel" },
@@ -37,6 +39,7 @@
     "bio": "Studied and worked in civil engineering and GIS before deciding to follow his passion and to join Gaza Sky Geeks in cooperation with Founders and Coders. Likes logical thinking and problem-solving, enjoys challenges and self-improvement. Experience in Node.js, Express.js, MongoDB, React.js.",
     "id": "ramyshurafa",
     "imgName": "ramy-shurafa",
+    "resumeTitle": "ramy",
     "work": [
       { "tag": "nightingale", "titleImg": "Nightingale-Carousel" },
       { "tag": "connect5", "titleImg": "Connect5-Carousel" }
