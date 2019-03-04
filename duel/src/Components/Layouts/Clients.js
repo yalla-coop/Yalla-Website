@@ -21,7 +21,7 @@ export default class Clients extends Component {
         <TopLineNarrow left="-1rem" width="calc(100% + 2rem)" top="6rem" />
         <SectionWrapper>
           <h2>Recent Cooperations</h2>
-          <Fade top>
+          <Fade clear>
             <LogoWrapper>
               {ProjectJSON.map((project, index) => {
                 const { Logo, Testimonial } = project;
