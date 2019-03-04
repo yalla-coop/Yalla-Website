@@ -45,7 +45,7 @@ export default class Team extends Component {
     const { profile, loaded } = this.state;
     if (!loaded) return <h1>Loading...</h1>;
     else {
-      const { name, github, linkedin, bio, imgName, work } = profile;
+      const { name, github, linkedin, bio, imgName, work, resumeTitle } = profile;
       return (
         <TeamMemberWrapper id="about">
           <LeftLine top="0" height="20rem" />
@@ -69,6 +69,7 @@ export default class Team extends Component {
                       <img
                         src={require('../../assets/profiles/image 2.svg')}
                         alt="github"
+                        title={`View ${name}'s Github profile`}
                       />
                     </a>
                     <a
@@ -79,6 +80,17 @@ export default class Team extends Component {
                       <img
                         src={require('../../assets/profiles/linkedin-5.svg')}
                         alt="linkedin"
+                        title={`View ${name}'s Linkedin profile`}
+                      />
+                    </a>
+                    <a
+                     href={require(`../../assets/resumes/${resumeTitle}.pdf`)}
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      <img
+                        src={require('../../assets/profiles/cv.png')}
+                        title={`View ${name}'s resume`}
                       />
                     </a>
                   </div>
