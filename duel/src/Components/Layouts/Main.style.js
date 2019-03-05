@@ -577,6 +577,7 @@ export const FlickityContainer = styled.div.attrs({
 
 export const ProfileWrapper = styled.div.attrs({ className: "flex" })`
   position: relative;
+  margin-bottom: 30px;
   .image {
     position: relative;
     img {

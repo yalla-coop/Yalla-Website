@@ -83,16 +83,20 @@ export default class Team extends Component {
                         title={`View ${name}'s Linkedin profile`}
                       />
                     </a>
-                    <a
-                     href={require(`../../assets/resumes/${resumeTitle}.pdf`)}
+                    {
+                      resumeTitle &&
+                      <a
+                      href={require(`../../assets/resumes/${resumeTitle}.pdf`)}
                       rel="noreferrer noopener"
                       target="_blank"
-                    >
+                      >
                       <img
                         src={require('../../assets/profiles/cv.png')}
                         title={`View ${name}'s resume`}
-                      />
+                        alt={`View ${name}'s resume`}
+                        />
                     </a>
+                      }
                   </div>
                 </ProfileDescr>
               </ProfileWrapper>
