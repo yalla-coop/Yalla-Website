@@ -6,7 +6,7 @@
     "teaser": "Improving social and environmental conditions through the use of technology is Simon's vision.",
     "bio": "Having studied and worked in natural resource management and data science he has determined work towards improving social and environmental conditions through the use of technology. Having recently graduated from Founders and Coders Simon is very eager to use his software development skills within Yalla. Experience with Node, React, Express, SQL, MongoDB.",
     "id": "simondupree",
-    "imgName": "simon-dupree",
+    "imgName": "simon",
     "resumeTitle": "simon",
     "work": [
       { "tag": "nightingale", "titleImg": "Nightingale-Carousel" },
@@ -22,7 +22,7 @@
     "teaser": "Joe is keen to develop technology in a responsible way that will help drive positive, sustainable change.",
     "bio": "Joe worked in media and digital advertising where he helped develop Fun Kids into a national award-winning brand and set up an influencer marketing division for one of the UK’s leading  agencies. Having spent most of his career working where technology and young people intersect, Joe is keen to develop technology in a responsible way that will help drive positive, sustainable change. Experience with Node, React, Express, SQL, MongoDB.",
     "id": "joefriel",
-    "imgName": "joe-friel",
+    "imgName": "joe",
     "resumeTitle": "joe",
     "work": [
       { "tag": "nightingale", "titleImg": "Nightingale-Carousel" },
@@ -52,7 +52,7 @@
     "teaser": "Full stack developer with a strong mind for code and a deep love of problem solving.",
     "bio": "Full stack developer with a strong mind for code and a deep love of problem solving. Experience with Node, React, Express, PHP. Fast learner and excellent communicator. Proud owner of a 🐶 named after a 🐟.",
     "id": "michaelwatts",
-    "imgName": "michael-watts",
+    "imgName": "michael",
     "work": [
       { "tag": "rent-check", "titleImg": "EastEnd-Carousel" },
       { "tag": "connect5", "titleImg": "Connect5-Carousel" }
