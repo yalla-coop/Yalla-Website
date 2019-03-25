@@ -27,7 +27,7 @@ export default class About extends Component {
           <TeamWrapper>
             {profiles.map((profile, index) => (
               <Member key={index}>
-                <Slide bottom>
+                <Slide fade>
                   <ProfileHeader>
                     <ProfileImgDiv
                       src={require(`../../assets/profiles/${
