@@ -14,7 +14,9 @@ import {
   ProjectLinkWrapper,
   ProjectTextBox,
   ExtLink,
-  BackLink
+  BackLink,
+  LogoDiv,
+  LogoWrapper
 } from './Main.style.js';
 
 const checkTag = (url, tag) => url === tag;
@@ -51,7 +53,8 @@ export default class Project extends Component {
               GitHub,
               Website,
               Tag,
-              TitleImg
+              TitleImg,
+              Logo
             },
             index
           ) => {
@@ -82,6 +85,11 @@ export default class Project extends Component {
                           <h2>{Title.toUpperCase()}</h2>
                         </div>
                       </SectionWrapper>
+                      <LogoWrapper>
+                        <LogoDiv
+                          src={require(`../../assets/workScreens/${Logo}.png`)}
+                        />
+                      </LogoWrapper>
                       <h3>{Teaser}</h3>
                       <ProjectTextBox>
                         <p>{Description1}</p>
@@ -91,14 +99,16 @@ export default class Project extends Component {
                         title={Title}
                         img={require(`../../assets/workScreens/${TitleImg}.png`)}
                       />
-                      <ProjectLinkWrapper>
-                        <ExtLink href={Website} target="_blank">
-                          Visit Website
-                        </ExtLink>
-                        <ExtLink href={GitHub} target="_blank">
-                          View on GitHub
-                        </ExtLink>
-                      </ProjectLinkWrapper>
+                      {Website && GitHub && (
+                        <ProjectLinkWrapper>
+                          <ExtLink href={Website} target="_blank">
+                            Visit Website
+                          </ExtLink>
+                          <ExtLink href={GitHub} target="_blank">
+                            View on GitHub
+                          </ExtLink>
+                        </ProjectLinkWrapper>
+                      )}
                       <ProjectFooter
                         to="projectGallery"
                         smooth={true}

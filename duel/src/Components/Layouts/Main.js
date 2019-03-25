@@ -17,7 +17,7 @@ export default class Main extends Component {
         <Landing />
         <Intro />
         <Work />
-        <Clients />
+
         <About />
         <Contact />
       </Container>
