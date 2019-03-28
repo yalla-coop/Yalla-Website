@@ -676,7 +676,7 @@ export const LogoWrapper = styled.div.attrs({
 export const LogoDiv = styled.img.attrs({
   className: 'flex'
 })`
-  @media (max-width: ${size.laptopL}) {
+  @media (max-width: ${size.laptop}) {
     display: none;
   }
 `;
